@@ -4,7 +4,7 @@ import com.example.gympower.model.enums.SpecialFeaturesEnum;
 
 import javax.persistence.*;
 
-@Table(name = "specials")
+@Table(name = "special_features")
 @Entity
 public class SpecialFeatures {
 
@@ -12,6 +12,8 @@ public class SpecialFeatures {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private SpecialFeaturesEnum feature;
 
     public SpecialFeatures() {

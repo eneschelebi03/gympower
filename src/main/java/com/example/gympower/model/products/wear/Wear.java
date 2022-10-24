@@ -7,8 +7,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Set;
 
-@Table(name = "wear")
 @Entity
+@Table(name = "wear")
 public class Wear extends Product {
 
     private int size;

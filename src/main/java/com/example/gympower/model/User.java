@@ -32,15 +32,10 @@ public class User {
     @OneToMany
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(fetch = FetchType.LAZY)
     private Set<Order> orders = new java.util.LinkedHashSet<>();
 
-    @OneToOne
-    private Card card;
-
-    @OneToOne
-    private Paypal paypal;
-
+    @ManyToOne
     private Picture profilePhoto;
 
     public User() {
@@ -133,24 +128,6 @@ public class User {
 
     public User setOrders(Set<Order> orders) {
         this.orders = orders;
-        return this;
-    }
-
-    public Card getCard() {
-        return card;
-    }
-
-    public User setCard(Card card) {
-        this.card = card;
-        return this;
-    }
-
-    public Paypal getPaypal() {
-        return paypal;
-    }
-
-    public User setPaypal(Paypal paypal) {
-        this.paypal = paypal;
         return this;
     }
 

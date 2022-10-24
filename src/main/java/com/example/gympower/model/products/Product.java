@@ -9,7 +9,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Set;
 
-@MappedSuperclass
+
+@Table(name = "products")
+@Entity
 public class Product {
 
     @Id
@@ -19,7 +21,7 @@ public class Product {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany
     private Set<Picture> pictures;
 
     @Column(columnDefinition = "TEXT")

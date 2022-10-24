@@ -2,10 +2,12 @@ package com.example.gympower.model.products.protein;
 
 import com.example.gympower.model.products.Product;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.Set;
 
-@Table(name = "proteins")
 @Entity
 public class Protein extends Product {
 

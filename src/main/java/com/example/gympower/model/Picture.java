@@ -17,8 +17,6 @@ public class Picture {
     @Column(columnDefinition = "TEXT")
     private String url;
 
-    @ManyToOne
-    private Product product;
 
     public Picture() {
     }
@@ -47,15 +45,6 @@ public class Picture {
 
     public Picture setUrl(String url) {
         this.url = url;
-        return this;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public Picture setProduct(Product product) {
-        this.product = product;
         return this;
     }
 }

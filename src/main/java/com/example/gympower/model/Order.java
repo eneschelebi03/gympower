@@ -3,6 +3,7 @@ package com.example.gympower.model;
 import com.example.gympower.model.products.Product;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -13,13 +14,17 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
-
     @ManyToMany
     private Set<Product> productId;
 
     @ManyToOne
     private User user;
+
+    @Column(nullable = false)
+    private LocalDateTime localDateTime;
+
+    @ManyToOne
+    private Status status;
 
     public Order() {
     }
@@ -48,6 +53,15 @@ public class Order {
 
     public Order setUser(User user) {
         this.user = user;
+        return this;
+    }
+
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
+
+    public Order setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
         return this;
     }
 }
