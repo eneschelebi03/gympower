@@ -1,10 +1,10 @@
 const slides = [];
 
 $(document).ready(function () {
-    loadCarousel()
+    loadMainCarousel()
 });
 
-function loadCarousel() {
+function loadMainCarousel() {
     $.get("http://localhost:8080/carousel", function (responseJson) {
 
         let exclusiveCarousel = document.getElementById('offers')
@@ -28,9 +28,9 @@ function loadCarousel() {
 
         });
 
-        carouselAction();
 
     }).done(function () {
+        carouselAction();
 
     }).fail(function () {
         alert('failed')
