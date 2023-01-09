@@ -10,7 +10,7 @@ import java.util.Set;
 public class Supplement extends Product {
 
     @ManyToMany
-    private Set<Flavor> flavor;
+    private Set<Flavor> flavors;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<SpecialFeature> specialFeatures;
@@ -24,12 +24,12 @@ public class Supplement extends Product {
         return this;
     }
 
-    public Set<Flavor> getFlavor() {
-        return flavor;
+    public Set<Flavor> getFlavors() {
+        return flavors;
     }
 
-    public Supplement setFlavor(Set<Flavor> flavor) {
-        this.flavor = flavor;
+    public Supplement setFlavors(Set<Flavor> flavors) {
+        this.flavors = flavors;
         return this;
     }
 }

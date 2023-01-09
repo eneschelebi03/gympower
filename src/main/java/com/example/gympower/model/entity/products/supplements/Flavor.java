@@ -1,7 +1,7 @@
 package com.example.gympower.model.entity.products.supplements;
 
 import com.example.gympower.model.entity.Picture;
-import com.example.gympower.model.entity.enums.FlavorEnum;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -14,10 +14,8 @@ public class Flavor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private FlavorEnum flavor;
-
+    private String flavorName;
 
     @ManyToMany
     private Set<Picture> pictures;
@@ -36,15 +34,6 @@ public class Flavor {
         return this;
     }
 
-    public FlavorEnum getFlavor() {
-        return flavor;
-    }
-
-    public Flavor setFlavor(FlavorEnum flavor) {
-        this.flavor = flavor;
-        return this;
-    }
-
     public Set<Picture> getPictures() {
         return pictures;
     }
@@ -60,6 +49,15 @@ public class Flavor {
 
     public Flavor setCuts(Set<Cut> cuts) {
         this.cuts = cuts;
+        return this;
+    }
+
+    public String getFlavorName() {
+        return flavorName;
+    }
+
+    public Flavor setFlavorName(String flavorName) {
+        this.flavorName = flavorName;
         return this;
     }
 

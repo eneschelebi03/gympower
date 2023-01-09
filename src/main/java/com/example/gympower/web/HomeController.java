@@ -4,14 +4,13 @@ package com.example.gympower.web;
 import com.example.gympower.model.dto.ActiveOfferDTO;
 import com.example.gympower.model.dto.CarouselProductDTO;
 import com.example.gympower.service.ExclusiveOfferService;
-import com.example.gympower.service.ProductService;
+import com.example.gympower.service.SupplementService;
+import com.example.gympower.service.WearService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 @CrossOrigin("*")
@@ -19,12 +18,13 @@ import java.util.List;
 public class HomeController {
 
     private final ExclusiveOfferService exclusiveOfferService;
+    private final SupplementService supplementService;
+    private final WearService wearService;
 
-    private final ProductService productService;
-
-    public HomeController(ExclusiveOfferService exclusiveOfferService, ProductService productService) {
+    public HomeController(ExclusiveOfferService exclusiveOfferService, SupplementService supplementService, WearService wearService) {
         this.exclusiveOfferService = exclusiveOfferService;
-        this.productService = productService;
+        this.supplementService = supplementService;
+        this.wearService = wearService;
     }
 
     @GetMapping("/carousel")
@@ -33,5 +33,21 @@ public class HomeController {
         List<ActiveOfferDTO> carouselOffers = this.exclusiveOfferService.getActiveOffers();
 
         return ResponseEntity.ok(carouselOffers);
+    }
+
+    @GetMapping("/topSupps")
+    public ResponseEntity<List<CarouselProductDTO>> getTopSupplements() {
+
+        List<CarouselProductDTO> topSupplements = this.supplementService.getTopSuppDTOs();
+
+        return ResponseEntity.ok(topSupplements);
+    }
+
+    @GetMapping("/topWear")
+    public ResponseEntity<List<CarouselProductDTO>> getTopWear() {
+
+        List<CarouselProductDTO> topSupplements = this.wearService.getTopWearDTOs();
+
+        return ResponseEntity.ok(topSupplements);
     }
 }

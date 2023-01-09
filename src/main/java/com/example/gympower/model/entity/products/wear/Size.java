@@ -1,7 +1,5 @@
 package com.example.gympower.model.entity.products.wear;
 
-import com.example.gympower.model.entity.enums.WearSizeEnum;
-
 import javax.persistence.*;
 
 @Table(name = "sizes")
@@ -12,9 +10,11 @@ public class Size {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private WearSizeEnum size;
+    private String name;
 
     private int itemsProduced;
+
+    private boolean isActive;
 
     public long getId() {
         return id;
@@ -25,12 +25,12 @@ public class Size {
         return this;
     }
 
-    public WearSizeEnum getSize() {
-        return size;
+    public String getName() {
+        return name;
     }
 
-    public Size setSize(WearSizeEnum size) {
-        this.size = size;
+    public Size setName(String name) {
+        this.name = name;
         return this;
     }
 
@@ -40,6 +40,15 @@ public class Size {
 
     public Size setItemsProduced(int itemsProduced) {
         this.itemsProduced = itemsProduced;
+        return this;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public Size setActive(boolean active) {
+        isActive = active;
         return this;
     }
 }

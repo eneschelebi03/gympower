@@ -18,7 +18,9 @@ public enum ProductCategoriesEnum {
     KIDS,
 
     CLOTHING,
+    WEAR,
     T_SHIRT,
+    LONG_SLEEVE,
     HOODIE,
     JOGGING,
     TRACKSUIT,
@@ -26,6 +28,11 @@ public enum ProductCategoriesEnum {
     SHORTS,
     FLEECE,
     ZIP_TOP,
+    JACKET,
     SHIRT,
-    VEST
+    SPORTS_BRA,
+    VEST,
+    GILET,
+    SOCKS,
+    UNDERWEAR
 }

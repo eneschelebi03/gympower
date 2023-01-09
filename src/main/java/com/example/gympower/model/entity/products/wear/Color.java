@@ -1,7 +1,6 @@
 package com.example.gympower.model.entity.products.wear;
 
 import com.example.gympower.model.entity.Picture;
-import com.example.gympower.model.entity.enums.ColorEnum;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -15,8 +14,11 @@ public class Color {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Enumerated(EnumType.STRING)
-    private ColorEnum color;
+    @Column(nullable = false)
+    private String colorName;
+
+    @Column(nullable = false)
+    private String colorCode;
 
     @Column(nullable = false)
     private BigDecimal cost;
@@ -44,12 +46,12 @@ public class Color {
         return this;
     }
 
-    public ColorEnum getColor() {
-        return color;
+    public String getColorName() {
+        return colorName;
     }
 
-    public Color setColor(ColorEnum color) {
-        this.color = color;
+    public Color setColorName(String colorName) {
+        this.colorName = colorName;
         return this;
     }
 
@@ -95,6 +97,15 @@ public class Color {
 
     public Color setSizes(Set<Size> sizes) {
         this.sizes = sizes;
+        return this;
+    }
+
+    public String getColorCode() {
+        return colorCode;
+    }
+
+    public Color setColorCode(String colorCode) {
+        this.colorCode = colorCode;
         return this;
     }
 }

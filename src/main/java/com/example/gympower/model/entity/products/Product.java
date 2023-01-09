@@ -2,10 +2,8 @@ package com.example.gympower.model.entity.products;
 
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.Comment;
-import com.example.gympower.model.entity.Picture;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -17,7 +15,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
 
     private String slogan;
@@ -31,7 +29,7 @@ public class Product {
     private Set<Comment> comments;
 
     @ManyToMany
-    private Set<Category> category;
+    private Set<Category> categories;
 
     private LocalDateTime added = LocalDateTime.now();
 
@@ -81,12 +79,12 @@ public class Product {
         return this;
     }
 
-    public Set<Category> getCategory() {
-        return category;
+    public Set<Category> getCategories() {
+        return categories;
     }
 
-    public Product setCategory(Set<Category> category) {
-        this.category = category;
+    public Product setCategories(Set<Category> categories) {
+        this.categories = categories;
         return this;
     }
 
