@@ -1,7 +1,5 @@
 package com.example.gympower.model.entity;
 
-import com.example.gympower.model.entity.products.Product;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -17,7 +15,7 @@ public class Comment {
     private String content;
 
     @ManyToOne
-    private User author;
+    private UserEntity author;
 
     private LocalDateTime written;
 
@@ -44,11 +42,11 @@ public class Comment {
         return this;
     }
 
-    public User getAuthor() {
+    public UserEntity getAuthor() {
         return author;
     }
 
-    public Comment setAuthor(User author) {
+    public Comment setAuthor(UserEntity author) {
         this.author = author;
         return this;
     }

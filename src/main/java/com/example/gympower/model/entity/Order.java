@@ -1,7 +1,5 @@
 package com.example.gympower.model.entity;
 
-import com.example.gympower.model.entity.products.Product;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -16,7 +14,7 @@ public class Order {
     private long productId;
 
     @ManyToOne
-    private User user;
+    private UserEntity userEntity;
 
     @Column(nullable = false)
     private LocalDateTime localDateTime;
@@ -54,12 +52,12 @@ public class Order {
         return this;
     }
 
-    public User getUser() {
-        return user;
+    public UserEntity getUser() {
+        return userEntity;
     }
 
-    public Order setUser(User user) {
-        this.user = user;
+    public Order setUser(UserEntity userEntity) {
+        this.userEntity = userEntity;
         return this;
     }
 

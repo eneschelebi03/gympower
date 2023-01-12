@@ -5,7 +5,7 @@ import java.util.Set;
 
 @Table(name = "users")
 @Entity
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class User {
     private Address address;
 
     @OneToMany
-    private Set<Role> roles;
+    private Set<UserRole> userRoles;
 
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Order> orders = new java.util.LinkedHashSet<>();
@@ -37,14 +37,14 @@ public class User {
     @ManyToOne
     private Picture profilePhoto;
 
-    public User() {
+    public UserEntity() {
     }
 
     public long getId() {
         return id;
     }
 
-    public User setId(long id) {
+    public UserEntity setId(long id) {
         this.id = id;
         return this;
     }
@@ -53,7 +53,7 @@ public class User {
         return email;
     }
 
-    public User setEmail(String email) {
+    public UserEntity setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -62,7 +62,7 @@ public class User {
         return password;
     }
 
-    public User setPassword(String password) {
+    public UserEntity setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -71,7 +71,7 @@ public class User {
         return username;
     }
 
-    public User setUsername(String username) {
+    public UserEntity setUsername(String username) {
         this.username = username;
         return this;
     }
@@ -80,7 +80,7 @@ public class User {
         return firstName;
     }
 
-    public User setFirstName(String firstName) {
+    public UserEntity setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -89,7 +89,7 @@ public class User {
         return lastName;
     }
 
-    public User setLastName(String lastName) {
+    public UserEntity setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -98,7 +98,7 @@ public class User {
         return phoneNumber;
     }
 
-    public User setPhoneNumber(String phoneNumber) {
+    public UserEntity setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
@@ -107,17 +107,17 @@ public class User {
         return address;
     }
 
-    public User setAddress(Address address) {
+    public UserEntity setAddress(Address address) {
         this.address = address;
         return this;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Set<UserRole> getRoles() {
+        return userRoles;
     }
 
-    public User setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public UserEntity setRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
         return this;
     }
 
@@ -125,7 +125,7 @@ public class User {
         return orders;
     }
 
-    public User setOrders(Set<Order> orders) {
+    public UserEntity setOrders(Set<Order> orders) {
         this.orders = orders;
         return this;
     }
@@ -134,7 +134,7 @@ public class User {
         return profilePhoto;
     }
 
-    public User setProfilePhoto(Picture profilePhoto) {
+    public UserEntity setProfilePhoto(Picture profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
     }
