@@ -8,13 +8,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 @Repository
 public interface WearRepository extends JpaRepository<Wear, Long> {
     List<Wear> findByRatingAfterOrderByRating(double rating);
 
     @Query(value = "select w.categories from Wear w where w.id = :id")
-    List<Category> findCategoriesByWearId(long id);
+    Set<Category> findCategoriesByWearId(long id);
 
-    List<Wear> findTop4ByCategoriesCategory(ProductCategoriesEnum category);
+    List<Wear> findTop4ByCategoriesCategoryAndIdNot(ProductCategoriesEnum category, long id);
 }

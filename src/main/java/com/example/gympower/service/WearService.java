@@ -10,9 +10,7 @@ import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.WearRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -49,14 +47,20 @@ public class WearService {
     }
 
     public List<CarouselProductDTO> findRelatedProducts(long id) {
-        List<Category> wantedCategories = this.wearRepository.findCategoriesByWearId(id);
-        ProductCategoriesEnum wantedCategory = wantedCategories.stream()
-                .parallel()
-                .findAny()
+        List<ProductCategoriesEnum> wantedCategories = this.wearRepository.findCategoriesByWearId(id)
+                .stream()
                 .map(Category::getCategory)
-                .get();
+                .toList();
 
-            return this.wearRepository.findTop4ByCategoriesCategory(wantedCategory).stream()
+        Random rand = new Random();
+
+        int randomIndex = rand.nextInt(wantedCategories.size());
+
+        ProductCategoriesEnum wantedCategory = wantedCategories.get(randomIndex);
+
+
+
+            return this.wearRepository.findTop4ByCategoriesCategoryAndIdNot(wantedCategory, id).stream()
                     .map(this.productMapper::wearToTopProductDTO)
                     .collect(Collectors.toList());
 
