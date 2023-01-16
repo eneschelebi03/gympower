@@ -13,6 +13,7 @@ import com.example.gympower.model.entity.products.wear.Color;
 import com.example.gympower.model.entity.products.wear.Size;
 import com.example.gympower.model.entity.products.wear.Wear;
 import com.example.gympower.repository.*;
+import com.example.gympower.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -38,7 +39,9 @@ public class GympowerAppInit implements CommandLineRunner {
 
     private final ExclusiveOfferRepository exclusiveOfferRepository;
 
-    public GympowerAppInit(SupplementRepository supplementRepository, PictureRepository pictureRepository, CutRepository cutRepository, WearRepository wearRepository, FlavorRepository flavorRepository, SpecialFeatureRepository specialFeatureRepository, CategoryRepository categoryRepository, SizeRepository sizeRepository, ColorRepository colorRepository, ExclusiveOfferRepository exclusiveOfferRepository) {
+    private final UserService userService;
+
+    public GympowerAppInit(SupplementRepository supplementRepository, PictureRepository pictureRepository, CutRepository cutRepository, WearRepository wearRepository, FlavorRepository flavorRepository, SpecialFeatureRepository specialFeatureRepository, CategoryRepository categoryRepository, SizeRepository sizeRepository, ColorRepository colorRepository, ExclusiveOfferRepository exclusiveOfferRepository, UserService userService) {
         this.supplementRepository = supplementRepository;
         this.pictureRepository = pictureRepository;
         this.cutRepository = cutRepository;
@@ -49,12 +52,14 @@ public class GympowerAppInit implements CommandLineRunner {
         this.sizeRepository = sizeRepository;
         this.colorRepository = colorRepository;
         this.exclusiveOfferRepository = exclusiveOfferRepository;
+        this.userService = userService;
     }
 
     @Override
     public void run(String... args) throws Exception {
         supplementsInit();
         wearInit();
+        initUsers();
     }
 
     private void supplementsInit() {
@@ -1940,6 +1945,10 @@ public class GympowerAppInit implements CommandLineRunner {
         this.exclusiveOfferRepository.save(menShortsOffer);
         this.exclusiveOfferRepository.save(menTShirtsOffer);
         this.exclusiveOfferRepository.save(womenLeggingsOffer);
+    }
+
+    private void initUsers() {
+        this.userService.init();
     }
 
 }

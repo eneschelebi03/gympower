@@ -28,7 +28,7 @@ public class UserEntity {
     @OneToOne
     private Address address;
 
-    @OneToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<UserRole> userRoles;
 
     @OneToMany(fetch = FetchType.LAZY)

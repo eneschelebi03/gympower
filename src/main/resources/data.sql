@@ -1,9 +1,3 @@
-INSERT INTO user_roles (id, role)
-VALUES (1, 'ADMIN'),
-       (2, 'MODERATOR'),
-       (3, 'USER'),
-       (4, 'GUEST');
-
 INSERT INTO order_statuses (id, status_name)
 VALUES (1, 'PENDING'),
        (2, 'SHIPPING'),

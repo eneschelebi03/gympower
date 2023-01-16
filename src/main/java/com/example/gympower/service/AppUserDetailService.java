@@ -9,8 +9,9 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
-// NOTE: Not annotated as service cuz it is returned as bean
+@Service
 public class AppUserDetailService implements UserDetailsService {
 
     private final UserRepository userRepository;
@@ -20,24 +21,21 @@ public class AppUserDetailService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String emailOrUsername) throws UsernameNotFoundException {
 
-        return this.userRepository.findByUsername(username)
+        return this.userRepository.findByEmailOrUsername(emailOrUsername, emailOrUsername)
                 .map(this::map)
-                .orElseThrow(() -> new UsernameNotFoundException("User with username " + username + " not found!"));
-
+                .orElseThrow(() -> new UsernameNotFoundException("User with email or username" + emailOrUsername + " not found!"));
     }
 
     private UserDetails map(UserEntity userEntity) {
-        UserDetails result = User.builder()
+        return User.builder()
                 .username(userEntity.getUsername())
                 .password(userEntity.getPassword())
                 .authorities(userEntity.getRoles().stream()
                         .map(this::mapRole)
                         .toList())
                 .build();
-
-        return result;
     }
 
     private GrantedAuthority mapRole(UserRole userRole) {
