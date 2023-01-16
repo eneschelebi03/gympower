@@ -27,7 +27,7 @@ public class HomeController {
         this.wearService = wearService;
     }
 
-    @GetMapping("/carousel")
+    @GetMapping("/offers/carousel")
     public ResponseEntity<List<ActiveOfferDTO>> getCarouselOffers() {
 
         List<ActiveOfferDTO> carouselOffers = this.exclusiveOfferService.getActiveOffers();
@@ -35,7 +35,7 @@ public class HomeController {
         return ResponseEntity.ok(carouselOffers);
     }
 
-    @GetMapping("/topSupps")
+    @GetMapping("/products/topSupps")
     public ResponseEntity<List<CarouselProductDTO>> getTopSupplements() {
 
         List<CarouselProductDTO> topSupplements = this.supplementService.getTopSuppDTOs();
@@ -43,7 +43,7 @@ public class HomeController {
         return ResponseEntity.ok(topSupplements);
     }
 
-    @GetMapping("/topWear")
+    @GetMapping("/products/topWear")
     public ResponseEntity<List<CarouselProductDTO>> getTopWear() {
 
         List<CarouselProductDTO> topSupplements = this.wearService.getTopWearDTOs();

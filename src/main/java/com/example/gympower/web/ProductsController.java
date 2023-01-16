@@ -25,7 +25,7 @@ public class ProductsController {
         this.wearService = wearService;
     }
 
-    @GetMapping("/supplements/all")
+    @GetMapping("/products/supplements/all")
     public ResponseEntity<List<AllProductsProductDTO>> allSupplements() {
 
         List<AllProductsProductDTO> allSupplementDTOs = this.supplementService.getAllSupplementDTOs();
@@ -33,7 +33,7 @@ public class ProductsController {
         return ResponseEntity.ok(allSupplementDTOs);
     }
 
-    @GetMapping("/wear/all")
+    @GetMapping("/products/wear/all")
     public ResponseEntity<List<AllProductsProductDTO>> allWear() {
 
         List<AllProductsProductDTO> allWearDTOs = this.wearService.getAllWear();
@@ -41,7 +41,7 @@ public class ProductsController {
         return ResponseEntity.ok(allWearDTOs);
     }
 
-    @GetMapping("/wear/{id}/details")
+    @GetMapping("/products/wear/{id}/details")
     public ResponseEntity<WearDetailsDTO> productDetails(@PathVariable("id") long id) {
 
         WearDetailsDTO wearDetails = this.wearService.findWearDetails(id);
@@ -49,7 +49,7 @@ public class ProductsController {
         return ResponseEntity.ok(wearDetails);
     }
 
-    @GetMapping("/wear/{id}/related")
+    @GetMapping("/products/wear/{id}/related")
     public ResponseEntity<List<CarouselProductDTO>> relatedProducts(@PathVariable("id") long id) {
 
         List<CarouselProductDTO> relatedProducts = this.wearService.findRelatedProducts(id);

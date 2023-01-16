@@ -38,7 +38,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests((authorize) ->
                         //authorize.anyRequest().authenticated()
                         authorize.antMatchers(HttpMethod.GET, "/products/**").permitAll()
-                                .antMatchers("/carousel", "/users/login").permitAll()
+                                .antMatchers("/offers/carousel", "/users/login").permitAll()
                                 .anyRequest().authenticated()
 
                 );
