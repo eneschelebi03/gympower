@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfiguration {
 
-    private UserDetailsService userDetailsService;
+    private final UserDetailsService userDetailsService;
 
     public SecurityConfiguration(UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
@@ -36,23 +36,22 @@ public class SecurityConfiguration {
         httpSecurity
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/products/**").permitAll()
-                .antMatchers("/offers/carousel", "/users/login").permitAll()
-                .anyRequest().authenticated()
-
-                .and().
-                // configuration of form login
-                        formLogin().
-                // the custom login form
-                        loginPage("/users/login").
-                // the name of the username form field
-                        usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY).
-                // the name of the password form field
-                        passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY).
-                // where to go in case that the login is successful
-                        defaultSuccessUrl("http://127.0.0.1:5500/html/index.html").
-                // where to go in case that the login failed
-                        failureForwardUrl("/users/login-error");
+                .antMatchers(HttpMethod.GET, "/products/**", "/users/user").permitAll()
+                .antMatchers("/offers/carousel", "/users/auth/login").permitAll()
+                .anyRequest().authenticated();
+//                .and().
+//                // configuration of form login
+//                        formLogin().
+//                // the custom login form
+//                        loginPage("/users/auth/login").
+//                // the name of the username form field
+//                        usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY).
+//                // the name of the password form field
+//                        passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY).
+//                // where to go in case that the login is successful
+//                        defaultSuccessUrl("http://127.0.0.1:5500/html/index.html").
+//                // where to go in case that the login failed
+//                        failureForwardUrl("/users/login-error");
 
         return httpSecurity.build();
     }
