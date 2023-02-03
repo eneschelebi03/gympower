@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @CrossOrigin("*")
-@RestController("/cart")
+@RestController()
 public class CartController {
 
     private final UserService userService;
@@ -17,21 +17,21 @@ public class CartController {
         this.userService = userService;
     }
 
-    @PostMapping("/addProduct")
+    @PostMapping("/cart/addProduct")
     public ResponseEntity<String> addProductToCart(@RequestParam("email") String email, @RequestParam("productId") long id) throws Exception {
         String result = this.userService.manipulateCart(email, id, "add");
 
         return ResponseEntity.ok(result);
     }
 
-    @PostMapping("/removeProduct")
+    @PostMapping("/cart/removeProduct")
     public ResponseEntity<String> removeProductFromCart(@RequestParam("email") String email, @RequestParam("productId") long id) throws Exception {
         String result = this.userService.manipulateCart(email, id, "remove");
 
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/products")
+    @GetMapping("/cart/products")
     public ResponseEntity<List<CartDTO>> getCart(@RequestParam("email") String email) throws Exception {
         List<CartDTO> result = this.userService.getCart(email);
 

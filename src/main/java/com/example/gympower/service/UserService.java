@@ -41,13 +41,15 @@ public class UserService {
 
         UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
 
-        Wear cartWear = this.wearService.findCartWear(productId);
+        Wear cartWear = this.wearService.findWear(productId);
 
         if (method.equals("add")) {
             user.getCartWear().add(cartWear);
         } else {
             user.getCartWear().remove(cartWear);
         }
+
+        this.userRepository.save(user);
 
         return user.getEmail() + " -> " + cartWear.getName();
     }
