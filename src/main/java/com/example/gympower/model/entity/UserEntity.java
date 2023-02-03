@@ -1,6 +1,12 @@
 package com.example.gympower.model.entity;
 
+import com.example.gympower.model.entity.products.Product;
+import com.example.gympower.model.entity.products.supplements.Supplement;
+import com.example.gympower.model.entity.products.wear.Wear;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Table(name = "users")
@@ -32,7 +38,13 @@ public class UserEntity {
     private Set<UserRole> userRoles;
 
     @OneToMany(fetch = FetchType.LAZY)
-    private Set<Order> orders = new java.util.LinkedHashSet<>();
+    private List<Order> orders = new ArrayList<>();
+
+    @ManyToMany
+    private List<Wear> cartWear;
+
+    @ManyToMany
+    private List<Supplement> cartSupp;
 
     @ManyToOne
     private Picture profilePhoto;
@@ -121,11 +133,20 @@ public class UserEntity {
         return this;
     }
 
-    public Set<Order> getOrders() {
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public UserEntity setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
+        return this;
+    }
+
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public UserEntity setOrders(Set<Order> orders) {
+    public UserEntity setOrders(List<Order> orders) {
         this.orders = orders;
         return this;
     }
@@ -136,6 +157,24 @@ public class UserEntity {
 
     public UserEntity setProfilePhoto(Picture profilePhoto) {
         this.profilePhoto = profilePhoto;
+        return this;
+    }
+
+    public List<Wear> getCartWear() {
+        return cartWear;
+    }
+
+    public UserEntity setCartWear(List<Wear> cartWear) {
+        this.cartWear = cartWear;
+        return this;
+    }
+
+    public List<Supplement> getCartSupp() {
+        return cartSupp;
+    }
+
+    public UserEntity setCartSupp(List<Supplement> cartSupp) {
+        this.cartSupp = cartSupp;
         return this;
     }
 }

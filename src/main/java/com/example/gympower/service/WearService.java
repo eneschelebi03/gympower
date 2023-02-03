@@ -40,6 +40,11 @@ public class WearService {
                 .collect(Collectors.toList());
     }
 
+    public Wear findCartWear(long id) {
+        return this.wearRepository.findById(id).get();
+
+    }
+
     public WearDetailsDTO findWearDetails(long id) {
         Wear wear = this.wearRepository.findById(id).get();
 

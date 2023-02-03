@@ -2,6 +2,7 @@ package com.example.gympower.model.mapper;
 
 import com.example.gympower.model.dto.AllProductsProductDTO;
 import com.example.gympower.model.dto.CarouselProductDTO;
+import com.example.gympower.model.dto.CartDTO;
 import com.example.gympower.model.dto.WearDetailsDTO;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
@@ -26,6 +27,12 @@ public abstract class ProductMapper {
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
+
+    @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
+    @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
+    public abstract CartDTO supplementToCartDTO(Supplement supplement);
+
+
 
     @Named("suppPrice")
     double suppPrice(Supplement supplement) {
@@ -83,6 +90,11 @@ public abstract class ProductMapper {
     @Mapping(target = "colors", source = "availableColors")
     @Mapping(target = "categories", source = "wear", qualifiedByName = "wearCategories")
     public abstract WearDetailsDTO wearToWearDetailsDTO(Wear wear);
+
+
+    @Mapping(target = "price", source = "wear", qualifiedByName = "wearPrice")
+    @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
+    public abstract CartDTO wearToCartDTO(Wear wear);
 
     @Named("wearCategories")
     Set<String> wearCategories(Wear wear) {
