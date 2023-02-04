@@ -2,9 +2,19 @@ package com.example.gympower.model.dto;
 
 public class CartDTO {
 
+    private long id;
     private String name;
     private double price;
     private String pictureUrl;
+
+    public long getId() {
+        return id;
+    }
+
+    public CartDTO setId(long id) {
+        this.id = id;
+        return this;
+    }
 
     public String getName() {
         return name;

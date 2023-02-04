@@ -134,3 +134,38 @@ productDetails.innerHTML = "<p>HOME / WEAR</p>\n" +
     "               <p>" + product.description + "</p>\n" +
     "            </div>"
 
+let cartItemInner;
+
+cartItemInner.innerHTML = '<div class="card">\n' +
+    '                <div class="img-box">\n' +
+    '                  <img\n' +
+    '                    src="/pictures/wear4.jpg"\n' +
+    '                    alt="Blue wear"\n' +
+    '                    width="80px"\n' +
+    '                    class="product-img"\n' +
+    '                  />\n' +
+    '                </div>\n' +
+    '\n' +
+    '                <div class="detail">\n' +
+    '                  <h4 class="product-name">Green Tomatoes 1 Kilo</h4>\n' +
+    '\n' +
+    '                  <div class="wrapper">\n' +
+    '                    <div class="product-qty">\n' +
+    '                      <button id="decrement">\n' +
+    '                        <ion-icon name="remove-outline"></ion-icon>\n' +
+    '                      </button>\n' +
+    '                      <span id="quantity">1</span>\n' +
+    '                      <button id="increment">\n' +
+    '                        <ion-icon name="add-outline"></ion-icon>\n' +
+    '                      </button>\n' +
+    '                    </div>\n' +
+    '\n' +
+    '                    <div class="price">$ <span id="price">1.25</span></div>\n' +
+    '                  </div>\n' +
+    '                </div>\n' +
+    '\n' +
+    '                <button id="product-close-btn" class="product-close-btn">\n' +
+    '                  <ion-icon name="close-outline"></ion-icon>\n' +
+    '                </button>\n' +
+    '              </div>'
+
