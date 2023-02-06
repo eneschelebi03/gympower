@@ -1,9 +1,7 @@
 package com.example.gympower.model.mapper;
 
-import com.example.gympower.model.dto.AllProductsProductDTO;
-import com.example.gympower.model.dto.CarouselProductDTO;
-import com.example.gympower.model.dto.CartDTO;
-import com.example.gympower.model.dto.WearDetailsDTO;
+import com.example.gympower.model.dto.*;
+import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
 import com.example.gympower.model.entity.products.supplements.Cut;
@@ -28,9 +26,6 @@ public abstract class ProductMapper {
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
 
-    @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
-    @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
-    public abstract CartDTO supplementToCartDTO(Supplement supplement);
 
 
 
@@ -67,6 +62,41 @@ public abstract class ProductMapper {
     @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
     public abstract CarouselProductDTO wearToTopProductDTO(Wear wear);
 
+
+
+    @Mapping(target = "colors", source = "availableColors")
+    @Mapping(target = "categories", source = "wear", qualifiedByName = "wearCategories")
+    public abstract WearDetailsDTO wearToWearDetailsDTO(Wear wear);
+
+
+    @Mapping(target = "price", source = "cartItem", qualifiedByName = "wearCartPrice")
+    @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
+    @Mapping(target = "name", source = "cartItem", qualifiedByName = "wearCartName")
+    public abstract DisplayCartItemDTO cartItemToCartDTO(CartItem cartItem);
+
+    @Named("wearCartName")
+    String wearCartName(CartItem cartItem) {
+        return cartItem.getWear().getName();
+    }
+
+    @Named("wearCartPrice")
+    double wearCartPrice(CartItem cartItem) {
+        return cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst().get()
+                .getPrice().doubleValue();
+    }
+
+    @Named("wearCartPicture")
+    String wearCartPicture(CartItem cartItem) {
+        return cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst().get()
+                .getPictures().stream()
+                .findFirst().get()
+                .getUrl();
+    }
+
     @Named("wearPrice")
     double wearPrice(Wear wear) {
         return wear.getAvailableColors().stream()
@@ -86,15 +116,6 @@ public abstract class ProductMapper {
                 .get()
                 .getUrl();
     }
-
-    @Mapping(target = "colors", source = "availableColors")
-    @Mapping(target = "categories", source = "wear", qualifiedByName = "wearCategories")
-    public abstract WearDetailsDTO wearToWearDetailsDTO(Wear wear);
-
-
-    @Mapping(target = "price", source = "wear", qualifiedByName = "wearPrice")
-    @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
-    public abstract CartDTO wearToCartDTO(Wear wear);
 
     @Named("wearCategories")
     Set<String> wearCategories(Wear wear) {

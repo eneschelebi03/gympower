@@ -1,9 +1,5 @@
 package com.example.gympower.model.entity;
 
-import com.example.gympower.model.entity.products.Product;
-import com.example.gympower.model.entity.products.supplements.Supplement;
-import com.example.gympower.model.entity.products.wear.Wear;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,11 +36,8 @@ public class UserEntity {
     @OneToMany(fetch = FetchType.LAZY)
     private List<Order> orders = new ArrayList<>();
 
-    @ManyToMany
-    private List<Wear> cartWear;
-
-    @ManyToMany
-    private List<Supplement> cartSupp;
+    @OneToMany
+    private List<CartItem> cartItems = new ArrayList<>();
 
     @ManyToOne
     private Picture profilePhoto;
@@ -160,21 +153,12 @@ public class UserEntity {
         return this;
     }
 
-    public List<Wear> getCartWear() {
-        return cartWear;
+    public List<CartItem> getCartItems() {
+        return cartItems;
     }
 
-    public UserEntity setCartWear(List<Wear> cartWear) {
-        this.cartWear = cartWear;
-        return this;
-    }
-
-    public List<Supplement> getCartSupp() {
-        return cartSupp;
-    }
-
-    public UserEntity setCartSupp(List<Supplement> cartSupp) {
-        this.cartSupp = cartSupp;
+    public UserEntity setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
         return this;
     }
 }

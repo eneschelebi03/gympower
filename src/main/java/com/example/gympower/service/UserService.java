@@ -1,6 +1,8 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.CartDTO;
+import com.example.gympower.model.dto.EditCartDTO;
+import com.example.gympower.model.dto.DisplayCartItemDTO;
+import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.UserEntity;
 import com.example.gympower.model.entity.UserRole;
 import com.example.gympower.model.entity.enums.UserRolesEnum;
@@ -11,7 +13,6 @@ import com.example.gympower.repository.UserRoleRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -24,34 +25,52 @@ public class UserService {
     private final UserRoleRepository userRoleRepository;
 
     private final PasswordEncoder passwordEncoder;
+
     private final WearService wearService;
+
+    private final CartItemService cartItemService;
 
     private final ProductMapper productMapper;
 
-    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder, WearService wearService, ProductMapper productMapper) {
+    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder, WearService wearService, CartItemService cartItemService, ProductMapper productMapper) {
         this.userRepository = userRepository;
         this.userRoleRepository = userRoleRepository;
         this.passwordEncoder = passwordEncoder;
         this.wearService = wearService;
+        this.cartItemService = cartItemService;
         this.productMapper = productMapper;
     }
 
-    public String manipulateCart(String email, long productId, String method) throws Exception {
+    public String manipulateCart(String email, EditCartDTO cartDTO, String method) throws Exception {
         Optional<UserEntity> userOpt = this.userRepository.findByEmail(email);
 
         UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
 
-        Wear cartWear = this.wearService.findWear(productId);
+        Wear wear = this.wearService.findWear(cartDTO.getWearId());
 
         if (method.equals("add")) {
-            user.getCartWear().add(cartWear);
+
+            CartItem cartItem = new CartItem()
+                    .setColor(cartDTO.getColor())
+                    .setSize(cartDTO.getSize())
+                    .setWear(wear);
+
+            cartItem = this.cartItemService.add(cartItem);
+            user.getCartItems().add(cartItem);
+
         } else {
-            user.getCartWear().remove(cartWear);
+
+            CartItem cartItem = this.cartItemService.findById(cartDTO.getWearId());
+
+            user.getCartItems().remove(cartItem);
+
+            this.cartItemService.remove(cartItem);
+
         }
 
         this.userRepository.save(user);
 
-        return user.getEmail() + " -> " + cartWear.getName();
+        return user.getEmail() + " -> " + wear.getName();
     }
 
 
@@ -109,18 +128,15 @@ public class UserService {
 
     }
 
-    public List<CartDTO> getCart(String email) throws Exception {
+    public List<DisplayCartItemDTO> getCart(String email) throws Exception {
         Optional<UserEntity> userOpt = this.userRepository.findByEmail(email);
 
         UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
 
-        List<CartDTO> wearDTOS = user.getCartWear().stream().map(this.productMapper::wearToCartDTO).toList();
-        List<CartDTO> suppDTOS = user.getCartSupp().stream().map(this.productMapper::supplementToCartDTO).toList();
+        List<DisplayCartItemDTO> result = user.getCartItems().stream()
+                .map(this.productMapper::cartItemToCartDTO)
+                .toList();
 
-        List<CartDTO> cartDTOS = new ArrayList<>();
-        cartDTOS.addAll(wearDTOS);
-        cartDTOS.addAll(suppDTOS);
-
-        return  cartDTOS;
+        return result;
     }
 }

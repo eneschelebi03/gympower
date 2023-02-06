@@ -1,6 +1,7 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.CartDTO;
+import com.example.gympower.model.dto.EditCartDTO;
+import com.example.gympower.model.dto.DisplayCartItemDTO;
 import com.example.gympower.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,22 +19,25 @@ public class CartController {
     }
 
     @PostMapping("/cart/addProduct")
-    public ResponseEntity<String> addProductToCart(@RequestParam("email") String email, @RequestParam("productId") long id) throws Exception {
-        String result = this.userService.manipulateCart(email, id, "add");
+    public ResponseEntity<String> addProductToCart(@RequestParam("email") String email,
+                                                   @RequestBody EditCartDTO cartItem) throws Exception {
+        String result = this.userService.manipulateCart(email, cartItem, "add");
 
         return ResponseEntity.ok(result);
     }
 
     @PostMapping("/cart/removeProduct")
-    public ResponseEntity<String> removeProductFromCart(@RequestParam("email") String email, @RequestParam("productId") long id) throws Exception {
-        String result = this.userService.manipulateCart(email, id, "remove");
+    public ResponseEntity<String> removeProductFromCart(@RequestParam("email") String email,
+                                                        @RequestBody EditCartDTO cartDTO) throws Exception {
+
+        String result = this.userService.manipulateCart(email, cartDTO, "remove");
 
         return ResponseEntity.ok(result);
     }
 
     @GetMapping("/cart/products")
-    public ResponseEntity<List<CartDTO>> getCart(@RequestParam("email") String email) throws Exception {
-        List<CartDTO> result = this.userService.getCart(email);
+    public ResponseEntity<List<DisplayCartItemDTO>> getCart(@RequestParam("email") String email) throws Exception {
+        List<DisplayCartItemDTO> result = this.userService.getCart(email);
 
         return ResponseEntity.ok(result);
     }
