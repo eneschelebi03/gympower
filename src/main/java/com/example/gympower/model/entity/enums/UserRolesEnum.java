@@ -4,6 +4,5 @@ public enum UserRolesEnum {
 
     ADMIN,
     MODERATOR,
-    USER,
-    GUEST
+    USER
 }

@@ -2,14 +2,20 @@ package com.example.gympower.service;
 
 import com.example.gympower.model.dto.EditCartDTO;
 import com.example.gympower.model.dto.DisplayCartItemDTO;
+import com.example.gympower.model.dto.RegisterDTO;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.UserEntity;
 import com.example.gympower.model.entity.UserRole;
 import com.example.gympower.model.entity.enums.UserRolesEnum;
 import com.example.gympower.model.entity.products.wear.Wear;
 import com.example.gympower.model.mapper.ProductMapper;
+import com.example.gympower.model.mapper.UserMapper;
 import com.example.gympower.repository.UserRepository;
 import com.example.gympower.repository.UserRoleRepository;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -32,13 +38,25 @@ public class UserService {
 
     private final ProductMapper productMapper;
 
-    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder, WearService wearService, CartItemService cartItemService, ProductMapper productMapper) {
+    private final UserMapper userMapper;
+    private final AppUserDetailService userDetailsService;
+
+    public UserService(UserRepository userRepository,
+                       UserRoleRepository userRoleRepository,
+                       PasswordEncoder passwordEncoder,
+                       WearService wearService,
+                       CartItemService cartItemService,
+                       ProductMapper productMapper,
+                       UserMapper userMapper,
+                       AppUserDetailService userDetailsService) {
         this.userRepository = userRepository;
         this.userRoleRepository = userRoleRepository;
         this.passwordEncoder = passwordEncoder;
         this.wearService = wearService;
         this.cartItemService = cartItemService;
         this.productMapper = productMapper;
+        this.userMapper = userMapper;
+        this.userDetailsService = userDetailsService;
     }
 
     public String manipulateCart(String email, EditCartDTO cartDTO, String method) throws Exception {
@@ -133,10 +151,40 @@ public class UserService {
 
         UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
 
-        List<DisplayCartItemDTO> result = user.getCartItems().stream()
+        return user.getCartItems().stream()
                 .map(this.productMapper::cartItemToCartDTO)
                 .toList();
+    }
 
-        return result;
+    public List<String> registerAndLogin(RegisterDTO registerDTO) {
+        UserEntity newUser = this.userMapper.registerDTOToUser(registerDTO);
+        newUser.setPassword(this.passwordEncoder.encode(registerDTO.getPassword()));
+
+        UserRole roleUser = this.userRoleRepository.findByRole(UserRolesEnum.USER);
+        newUser.getUserRoles().add(roleUser);
+
+        this.userRepository.save(newUser);
+
+        return this.login(newUser.getEmail());
+    }
+
+    public List<String> login(String email) {
+        UserDetails userDetails =
+                userDetailsService.loadUserByUsername(email);
+
+        Authentication auth =
+                new UsernamePasswordAuthenticationToken(
+                        userDetails,
+                        userDetails.getPassword(),
+                        userDetails.getAuthorities()
+                );
+
+        SecurityContextHolder.
+                getContext().
+                setAuthentication(auth);
+
+        return auth.getAuthorities().stream()
+                .map(Object::toString)
+                .toList();
     }
 }

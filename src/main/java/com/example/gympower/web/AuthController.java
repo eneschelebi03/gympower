@@ -17,8 +17,6 @@ public class AuthController {
 
 //    private final AppUserDetailService userDetailsService;
 
-
-
     private final AuthenticationManager authenticationManager;
 
     public AuthController(AuthenticationManager authenticationManager) {

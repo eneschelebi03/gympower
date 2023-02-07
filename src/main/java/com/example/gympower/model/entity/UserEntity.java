@@ -2,6 +2,7 @@ package com.example.gympower.model.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -31,7 +32,7 @@ public class UserEntity {
     private Address address;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Set<UserRole> userRoles;
+    private Set<UserRole> userRoles = new HashSet<>();
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Order> orders = new ArrayList<>();
