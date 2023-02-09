@@ -2,6 +2,7 @@ package com.example.gympower.service;
 
 import com.example.gympower.model.dto.AllProductsProductDTO;
 import com.example.gympower.model.dto.CarouselProductDTO;
+import com.example.gympower.model.entity.products.supplements.Supplement;
 import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.SupplementRepository;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,10 @@ public class SupplementService {
     public SupplementService(SupplementRepository supplementRepository, ProductMapper productMapper) {
         this.supplementRepository = supplementRepository;
         this.productMapper = productMapper;
+    }
+
+    public Supplement findById(long id) {
+       return this.supplementRepository.findById(id).get();
     }
 
     public List<CarouselProductDTO> getTopSuppDTOs() {

@@ -1,7 +1,10 @@
 package com.example.gympower.model.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "orders")
@@ -11,16 +14,22 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private long productId;
+    @ManyToMany
+    private List<OrderedProduct> orderedProducts = new ArrayList<>();
 
     @ManyToOne
     private UserEntity userEntity;
 
     @Column(nullable = false)
-    private LocalDateTime localDateTime;
+    private LocalDateTime localDateTime = LocalDateTime.now();
 
     @ManyToOne
     private Status status;
+
+    @ManyToOne
+    private Address address;
+
+    private BigDecimal totalCost;
 
     public Order() {
     }
@@ -34,12 +43,21 @@ public class Order {
         return this;
     }
 
-    public long getProductId() {
-        return productId;
+    public List<OrderedProduct> getOrderedProducts() {
+        return orderedProducts;
     }
 
-    public Order setProductId(long productId) {
-        this.productId = productId;
+    public Order setOrderedProducts(List<OrderedProduct> orderedProducts) {
+        this.orderedProducts = orderedProducts;
+        return this;
+    }
+
+    public UserEntity getUserEntity() {
+        return userEntity;
+    }
+
+    public Order setUserEntity(UserEntity userEntity) {
+        this.userEntity = userEntity;
         return this;
     }
 
@@ -67,6 +85,24 @@ public class Order {
 
     public Order setLocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
+        return this;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public Order setAddress(Address address) {
+        this.address = address;
+        return this;
+    }
+
+    public BigDecimal getTotalCost() {
+        return totalCost;
+    }
+
+    public Order setTotalCost(BigDecimal totalCost) {
+        this.totalCost = totalCost;
         return this;
     }
 }

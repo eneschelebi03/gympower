@@ -59,6 +59,10 @@ public class UserService {
         this.userDetailsService = userDetailsService;
     }
 
+    public UserEntity findByEmail(String email) {
+        return this.userRepository.findByEmail(email).get();
+    }
+
     public String manipulateCart(String email, EditCartDTO cartDTO, String method) throws Exception {
         Optional<UserEntity> userOpt = this.userRepository.findByEmail(email);
 
@@ -91,6 +95,47 @@ public class UserService {
         return user.getEmail() + " -> " + cartDTO.getWearId();
     }
 
+    public List<DisplayCartItemDTO> getCart(String email) throws Exception {
+        Optional<UserEntity> userOpt = this.userRepository.findByEmail(email);
+
+        UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
+
+        return user.getCartItems().stream()
+                .map(this.productMapper::cartItemToCartDTO)
+                .toList();
+    }
+
+    public List<String> registerAndLogin(RegisterDTO registerDTO) {
+        UserEntity newUser = this.userMapper.registerDTOToUser(registerDTO);
+        newUser.setPassword(this.passwordEncoder.encode(registerDTO.getPassword()));
+
+        UserRole roleUser = this.userRoleRepository.findByRole(UserRolesEnum.USER);
+        newUser.getUserRoles().add(roleUser);
+
+        this.userRepository.save(newUser);
+
+        return this.login(newUser.getEmail());
+    }
+
+    public List<String> login(String email) {
+        UserDetails userDetails =
+                userDetailsService.loadUserByUsername(email);
+
+        Authentication auth =
+                new UsernamePasswordAuthenticationToken(
+                        userDetails,
+                        userDetails.getPassword(),
+                        userDetails.getAuthorities()
+                );
+
+        SecurityContextHolder.
+                getContext().
+                setAuthentication(auth);
+
+        return auth.getAuthorities().stream()
+                .map(Object::toString)
+                .toList();
+    }
 
 
     public void init() {
@@ -144,47 +189,5 @@ public class UserService {
 
         this.userRepository.save(admin);
 
-    }
-
-    public List<DisplayCartItemDTO> getCart(String email) throws Exception {
-        Optional<UserEntity> userOpt = this.userRepository.findByEmail(email);
-
-        UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
-
-        return user.getCartItems().stream()
-                .map(this.productMapper::cartItemToCartDTO)
-                .toList();
-    }
-
-    public List<String> registerAndLogin(RegisterDTO registerDTO) {
-        UserEntity newUser = this.userMapper.registerDTOToUser(registerDTO);
-        newUser.setPassword(this.passwordEncoder.encode(registerDTO.getPassword()));
-
-        UserRole roleUser = this.userRoleRepository.findByRole(UserRolesEnum.USER);
-        newUser.getUserRoles().add(roleUser);
-
-        this.userRepository.save(newUser);
-
-        return this.login(newUser.getEmail());
-    }
-
-    public List<String> login(String email) {
-        UserDetails userDetails =
-                userDetailsService.loadUserByUsername(email);
-
-        Authentication auth =
-                new UsernamePasswordAuthenticationToken(
-                        userDetails,
-                        userDetails.getPassword(),
-                        userDetails.getAuthorities()
-                );
-
-        SecurityContextHolder.
-                getContext().
-                setAuthentication(auth);
-
-        return auth.getAuthorities().stream()
-                .map(Object::toString)
-                .toList();
     }
 }

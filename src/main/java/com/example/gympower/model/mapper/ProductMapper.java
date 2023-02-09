@@ -3,6 +3,7 @@ package com.example.gympower.model.mapper;
 import com.example.gympower.model.dto.*;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.Category;
+import com.example.gympower.model.entity.OrderedProduct;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
 import com.example.gympower.model.entity.products.supplements.Cut;
 import com.example.gympower.model.entity.products.supplements.Supplement;
@@ -18,6 +19,10 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public abstract class ProductMapper {
 
+
+    @Mapping(target = "type", source = "productOrderDTO", qualifiedByName = "orderedProductType")
+    public abstract OrderedProduct productOrderDtoToOrderedProduct(ProductOrderDTO productOrderDTO);
+
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract AllProductsProductDTO supplementToAllProductsSuppDTO(Supplement supplement);
@@ -27,6 +32,16 @@ public abstract class ProductMapper {
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
 
 
+    @Named("orderedProductType")
+    String orderedProductType(ProductOrderDTO productOrderDTO) {
+        if (productOrderDTO.getCategories().contains("WEAR")) {
+            return "WEAR";
+        } else if (productOrderDTO.getCategories().contains("SUPPLEMENT")) {
+            return "SUPPLEMENT";
+        }
+
+        return "PRODUCT";
+    }
 
 
     @Named("suppPrice")
