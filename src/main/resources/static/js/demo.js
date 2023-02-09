@@ -147,7 +147,7 @@ cartItemInner.innerHTML = '<div class="card">\n' +
     '                </div>\n' +
     '\n' +
     '                <div class="detail">\n' +
-    '                  <h4 class="product-name">Green Tomatoes 1 Kilo</h4>\n' +
+    '                  <h4 class="product-name">' + cartItem.name + ' - ' + cartItem.color + '<span class="color-visual"></span>' +' - ' + cartItem.size + '</h4>\n' +
     '\n' +
     '                  <div class="wrapper">\n' +
     '                    <div class="product-qty">\n' +
@@ -168,4 +168,6 @@ cartItemInner.innerHTML = '<div class="card">\n' +
     '                  <ion-icon name="close-outline"></ion-icon>\n' +
     '                </button>\n' +
     '              </div>'
+
+
 

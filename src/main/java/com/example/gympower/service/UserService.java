@@ -64,9 +64,9 @@ public class UserService {
 
         UserEntity user = userOpt.orElseThrow(() -> new Exception("User not found"));
 
-        Wear wear = this.wearService.findWear(cartDTO.getWearId());
 
         if (method.equals("add")) {
+            Wear wear = this.wearService.findWear(cartDTO.getWearId());
 
             CartItem cartItem = new CartItem()
                     .setColor(cartDTO.getColor())
@@ -88,7 +88,7 @@ public class UserService {
 
         this.userRepository.save(user);
 
-        return user.getEmail() + " -> " + wear.getName();
+        return user.getEmail() + " -> " + cartDTO.getWearId();
     }
 
 

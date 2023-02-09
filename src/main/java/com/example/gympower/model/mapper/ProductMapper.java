@@ -72,6 +72,7 @@ public abstract class ProductMapper {
     @Mapping(target = "price", source = "cartItem", qualifiedByName = "wearCartPrice")
     @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
     @Mapping(target = "name", source = "cartItem", qualifiedByName = "wearCartName")
+    @Mapping(target = "colorCode", source = "cartItem", qualifiedByName = "wearCartColorCode")
     public abstract DisplayCartItemDTO cartItemToCartDTO(CartItem cartItem);
 
     @Named("wearCartName")
@@ -85,6 +86,14 @@ public abstract class ProductMapper {
                 .filter(c -> c.getColorName().equals(cartItem.getColor()))
                 .findFirst().get()
                 .getPrice().doubleValue();
+    }
+
+    @Named("wearCartColorCode")
+    String wearCartColorCode(CartItem cartItem) {
+        return cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst().get()
+                .getColorCode();
     }
 
     @Named("wearCartPicture")

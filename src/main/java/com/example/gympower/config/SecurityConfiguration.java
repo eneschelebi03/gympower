@@ -38,7 +38,13 @@ public class SecurityConfiguration {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/products/**", "/users/user").permitAll()
                 .antMatchers("/offers/carousel", "/users/auth/login", "/users/register", "/cart/addProduct", "/cart/products", "/cart/removeProduct").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated()
+                .and()
+                .logout()
+                .logoutUrl("/users/logout")
+                .logoutSuccessUrl("http://127.0.0.1:5500/html/index.html")
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID");
 //                .and().
 //                // configuration of form login
 //                        formLogin().

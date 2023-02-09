@@ -7,6 +7,7 @@ public class DisplayCartItemDTO {
     private double price;
     private String pictureUrl;
     private String color;
+    private String colorCode;
     private String size;
 
     public long getId() {
@@ -60,6 +61,15 @@ public class DisplayCartItemDTO {
 
     public DisplayCartItemDTO setSize(String size) {
         this.size = size;
+        return this;
+    }
+
+    public String getColorCode() {
+        return colorCode;
+    }
+
+    public DisplayCartItemDTO setColorCode(String colorCode) {
+        this.colorCode = colorCode;
         return this;
     }
 }
