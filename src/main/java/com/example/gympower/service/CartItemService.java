@@ -1,6 +1,9 @@
 package com.example.gympower.service;
 
 import com.example.gympower.model.entity.CartItem;
+import com.example.gympower.model.entity.products.wear.Color;
+import com.example.gympower.model.entity.products.wear.Size;
+import com.example.gympower.model.entity.products.wear.Wear;
 import com.example.gympower.repository.CartItemRepository;
 import org.springframework.stereotype.Service;
 

@@ -5,6 +5,8 @@ import com.example.gympower.model.dto.CarouselProductDTO;
 import com.example.gympower.model.dto.WearDetailsDTO;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
+import com.example.gympower.model.entity.products.wear.Color;
+import com.example.gympower.model.entity.products.wear.Size;
 import com.example.gympower.model.entity.products.wear.Wear;
 import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.WearRepository;
@@ -68,6 +70,21 @@ public class WearService {
             return this.wearRepository.findTop4ByCategoriesCategoryAndIdNot(wantedCategory, id).stream()
                     .map(this.productMapper::wearToTopProductDTO)
                     .collect(Collectors.toList());
+    }
 
+    public void reduceQuantity(Wear wear, String color, String size, int count) {
+        Color wearColor = wear.getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(color))
+                .findFirst()
+                .get();
+
+        Size wearSize = wearColor.getSizes().stream()
+                .filter(s -> s.getName().equals(size))
+                .findFirst()
+                .get();
+
+        wearSize.setItemsProduced(wearSize.getItemsProduced() - count);
+
+        this.wearRepository.save(wear);
     }
 }

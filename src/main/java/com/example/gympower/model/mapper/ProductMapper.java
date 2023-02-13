@@ -12,7 +12,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
+import java.math.BigDecimal;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -20,8 +22,12 @@ import java.util.stream.Collectors;
 public abstract class ProductMapper {
 
 
-    @Mapping(target = "type", source = "productOrderDTO", qualifiedByName = "orderedProductType")
-    public abstract OrderedProduct productOrderDtoToOrderedProduct(ProductOrderDTO productOrderDTO);
+    @Mapping(target = "type", source = "cartItem", qualifiedByName = "orderedProductType")
+    @Mapping(target = "name", source = "cartItem", qualifiedByName = "orderedProductName")
+    @Mapping(target = "price", source = "cartItem", qualifiedByName = "orderedProductPrice")
+    @Mapping(target = "sizeOrQuantity", source = "size")
+    @Mapping(target = "colorOrFlavor", source = "color")
+    public abstract OrderedProduct cartItemToOrderedProduct(CartItem cartItem);
 
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
@@ -31,16 +37,33 @@ public abstract class ProductMapper {
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
 
+    @Named("orderedProductPrice")
+    double orderedProductPrice(CartItem cartItem) {
+        BigDecimal price = cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst()
+                .get()
+                .getPrice();
+
+        return price.doubleValue();
+    }
 
     @Named("orderedProductType")
-    String orderedProductType(ProductOrderDTO productOrderDTO) {
-        if (productOrderDTO.getCategories().contains("WEAR")) {
+    String orderedProductType(CartItem cartItem) {
+        if (cartItem.getWear().getCategories().stream()
+                .map(c -> c.getCategory().name())
+                .toList()
+                .contains("WEAR")
+        ) {
             return "WEAR";
-        } else if (productOrderDTO.getCategories().contains("SUPPLEMENT")) {
+        } else {
             return "SUPPLEMENT";
         }
+    }
 
-        return "PRODUCT";
+    @Named("orderedProductName")
+    String orderedProductName(CartItem cartItem) {
+        return cartItem.getWear().getName();
     }
 
 

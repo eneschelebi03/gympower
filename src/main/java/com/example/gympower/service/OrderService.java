@@ -1,10 +1,8 @@
 package com.example.gympower.service;
 
 import com.example.gympower.model.dto.OrderDTO;
-import com.example.gympower.model.entity.Address;
-import com.example.gympower.model.entity.Order;
-import com.example.gympower.model.entity.OrderedProduct;
-import com.example.gympower.model.entity.UserEntity;
+import com.example.gympower.model.dto.ProductOrderDTO;
+import com.example.gympower.model.entity.*;
 import com.example.gympower.model.mapper.AddressMapper;
 import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.OrderRepository;
@@ -22,35 +20,73 @@ public class OrderService {
     private final SupplementService suppService;
     private final ProductMapper productMapper;
     private final AddressMapper addressMapper;
+    private final CartItemService cartItemService;
+    private final OrderedProductService orderedProductService;
+    private final AddressService addressService;
 
     public OrderService(OrderRepository orderRepository,
                         UserService userService,
                         WearService wearService,
-                        SupplementService suppService, ProductMapper productMapper, AddressMapper addressMapper) {
+                        SupplementService suppService, ProductMapper productMapper, AddressMapper addressMapper, CartItemService cartItemService, OrderedProductService orderedProductService, AddressService addressService) {
         this.orderRepository = orderRepository;
         this.userService = userService;
         this.wearService = wearService;
         this.suppService = suppService;
         this.productMapper = productMapper;
         this.addressMapper = addressMapper;
+        this.cartItemService = cartItemService;
+        this.orderedProductService = orderedProductService;
+        this.addressService = addressService;
     }
 
     public void createOrder(String email, OrderDTO orderDTO) {
 
         UserEntity user = this.userService.findByEmail(email);
 
-        List<OrderedProduct> orderedProducts = orderDTO.getProductOrderDTOs().stream()
-                .map(this.productMapper::productOrderDtoToOrderedProduct)
+        for (ProductOrderDTO productOrderDTO : orderDTO.getItems()) {
+            CartItem cartItem = user.getCartItems()
+                    .stream()
+                    .filter(c -> c.getId() == productOrderDTO.getId())
+                    .findFirst()
+                    .get();
+
+            cartItem.setCount(productOrderDTO.getCount());
+            this.cartItemService.add(cartItem);
+        }
+
+        List<OrderedProduct> orderedProducts = user.getCartItems()
+                .stream()
+                .map(this.productMapper::cartItemToOrderedProduct)
                 .toList();
 
-        double sum = orderedProducts.stream().map(OrderedProduct::getPrice).mapToDouble(Double::doubleValue).sum();
+        double sum = 0.00;
+        double tax = 1.05;
+        for (OrderedProduct orderedProduct : orderedProducts) {
+            orderedProduct = this.orderedProductService.save(orderedProduct);
 
-        Address address = this.addressMapper.addressDtoToAddress(orderDTO.getAddressDTO());
+            double totalProductPrice = orderedProduct.getPrice() * orderedProduct.getCount();
+            sum += totalProductPrice;
+
+        }
+
+        Address address = this.addressMapper.addressDtoToAddress(orderDTO.getDetails());
+
+        address = this.addressService.save(address);
 
         Order newOrder = new Order()
                 .setUser(user)
                 .setOrderedProducts(orderedProducts)
                 .setAddress(address)
-                .setTotalCost(BigDecimal.valueOf(sum));
+                .setTotalCost(BigDecimal.valueOf(sum * tax));
+
+        this.orderRepository.save(newOrder);
+
+
+        for (CartItem cartItem : user.getCartItems()) {
+            this.wearService.reduceQuantity(cartItem.getWear(), cartItem.getColor(), cartItem.getSize(), cartItem.getCount());
+        }
+
+        user.getCartItems().clear();
+        this.userService.save(user);
     }
 }

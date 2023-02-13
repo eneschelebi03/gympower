@@ -1,5 +1,7 @@
 package com.example.gympower.model.dto;
 
+import java.util.List;
+
 public class DisplayCartItemDTO {
 
     private long id;

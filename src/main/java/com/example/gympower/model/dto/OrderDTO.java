@@ -4,25 +4,25 @@ import java.util.List;
 
 public class OrderDTO {
 
-    private List<ProductOrderDTO> productOrderDTOs;
+    private List<ProductOrderDTO> items;
 
-    private AddressDTO addressDTO;
+    private AddressDTO details;
 
-    public List<ProductOrderDTO> getProductOrderDTOs() {
-        return productOrderDTOs;
+    public List<ProductOrderDTO> getItems() {
+        return items;
     }
 
-    public OrderDTO setProductOrderDTOs(List<ProductOrderDTO> productOrderDTOs) {
-        this.productOrderDTOs = productOrderDTOs;
+    public OrderDTO setItems(List<ProductOrderDTO> items) {
+        this.items = items;
         return this;
     }
 
-    public AddressDTO getAddressDTO() {
-        return addressDTO;
+    public AddressDTO getDetails() {
+        return details;
     }
 
-    public OrderDTO setAddressDTO(AddressDTO addressDTO) {
-        this.addressDTO = addressDTO;
+    public OrderDTO setDetails(AddressDTO details) {
+        this.details = details;
         return this;
     }
 }

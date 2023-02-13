@@ -37,7 +37,8 @@ public class SecurityConfiguration {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/products/**", "/users/user").permitAll()
-                .antMatchers("/offers/carousel", "/users/auth/login", "/users/register", "/cart/addProduct", "/cart/products", "/cart/removeProduct").permitAll()
+                .antMatchers("/offers/carousel", "/users/auth/login", "/users/register",
+                        "/cart/addProduct", "/cart/products", "/cart/removeProduct", "/order/new").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .logout()
