@@ -170,4 +170,16 @@ cartItemInner.innerHTML = '<div class="card">\n' +
     '              </div>'
 
 
+let address;
 
+address.innerHTML = '<div class="main-address-container">' +
+    '   <div class="pseudo-container">' +
+    '   </div>' +
+    '   <div class="address-container">' +
+    '       <div>' + responseJson.address.address + '</div>' +
+    '       <div>' + responseJson.address.city + ', ' + responseJson.address.postCode + '</div>' +
+    '       <div>' + responseJson.address.country + '</div>' +
+    '   </div>' +
+    '   <div class="pseudo-container">' +
+    '   </div>' +
+    '</div>'

@@ -10,12 +10,19 @@ public class OrderedProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String type;
 
+    @Column(nullable = false)
+    private String pictureUrl;
+
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String sizeOrQuantity;
 
+    @Column(nullable = false)
     private String colorOrFlavor;
 
     private double price;
@@ -82,6 +89,15 @@ public class OrderedProduct {
 
     public OrderedProduct setCount(int count) {
         this.count = count;
+        return this;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public OrderedProduct setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
         return this;
     }
 }

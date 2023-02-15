@@ -9,6 +9,8 @@ import com.example.gympower.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -87,6 +89,16 @@ public class OrderService {
         }
 
         user.getCartItems().clear();
+        user.getOrders().add(newOrder);
+
         this.userService.save(user);
+    }
+
+    public Order findCurrentOrder(String email) {
+        UserEntity byEmail = this.userService.findByEmail(email);
+        List<Order> userOrders = byEmail.getOrders();
+        userOrders.sort(Comparator.comparing(Order::getLocalDateTime).reversed());
+
+        return userOrders.stream().findFirst().get();
     }
 }

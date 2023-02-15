@@ -14,7 +14,6 @@ import org.mapstruct.Named;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -22,9 +21,12 @@ import java.util.stream.Collectors;
 public abstract class ProductMapper {
 
 
+    public abstract DisplayOrderedProductDTO orderedProductToDisplayDTO(OrderedProduct orderedProduct);
+
     @Mapping(target = "type", source = "cartItem", qualifiedByName = "orderedProductType")
     @Mapping(target = "name", source = "cartItem", qualifiedByName = "orderedProductName")
     @Mapping(target = "price", source = "cartItem", qualifiedByName = "orderedProductPrice")
+    @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
     @Mapping(target = "sizeOrQuantity", source = "size")
     @Mapping(target = "colorOrFlavor", source = "color")
     public abstract OrderedProduct cartItemToOrderedProduct(CartItem cartItem);
