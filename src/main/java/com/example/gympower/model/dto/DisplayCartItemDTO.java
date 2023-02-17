@@ -11,6 +11,7 @@ public class DisplayCartItemDTO {
     private String color;
     private String colorCode;
     private String size;
+    private int quantity;
 
     public long getId() {
         return id;
@@ -72,6 +73,15 @@ public class DisplayCartItemDTO {
 
     public DisplayCartItemDTO setColorCode(String colorCode) {
         this.colorCode = colorCode;
+        return this;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public DisplayCartItemDTO setQuantity(int quantity) {
+        this.quantity = quantity;
         return this;
     }
 }

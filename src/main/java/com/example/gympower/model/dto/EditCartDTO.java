@@ -8,6 +8,8 @@ public class EditCartDTO {
 
     private String size;
 
+    private int quantity;
+
     public long getWearId() {
         return wearId;
     }
@@ -32,6 +34,15 @@ public class EditCartDTO {
 
     public EditCartDTO setSize(String size) {
         this.size = size;
+        return this;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public EditCartDTO setQuantity(int quantity) {
+        this.quantity = quantity;
         return this;
     }
 }

@@ -76,7 +76,9 @@ public class UserService {
             CartItem cartItem = new CartItem()
                     .setColor(cartDTO.getColor())
                     .setSize(cartDTO.getSize())
+                    .setQuantity(cartDTO.getQuantity())
                     .setWear(wear);
+
 
             cartItem = this.cartItemService.add(cartItem);
             user.getCartItems().add(cartItem);

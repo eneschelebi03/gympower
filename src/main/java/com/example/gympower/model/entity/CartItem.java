@@ -13,7 +13,7 @@ public class CartItem {
     private long id;
     private String color;
     private String size;
-    private int count;
+    private int quantity;
 
     @ManyToOne
     private Wear wear;
@@ -46,12 +46,12 @@ public class CartItem {
         return this;
     }
 
-    public int getCount() {
-        return count;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public CartItem setCount(int count) {
-        this.count = count;
+    public CartItem setQuantity(int quantity) {
+        this.quantity = quantity;
         return this;
     }
 

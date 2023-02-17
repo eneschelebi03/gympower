@@ -3,7 +3,7 @@ package com.example.gympower.model.dto;
 public class ProductOrderDTO {
     private long id;
 
-    private int count;
+    private int quantity;
 
     public long getId() {
         return id;
@@ -14,12 +14,12 @@ public class ProductOrderDTO {
         return this;
     }
 
-    public int getCount() {
-        return count;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public ProductOrderDTO setCount(int count) {
-        this.count = count;
+    public ProductOrderDTO setQuantity(int quantity) {
+        this.quantity = quantity;
         return this;
     }
 }

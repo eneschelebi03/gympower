@@ -29,6 +29,7 @@ public abstract class ProductMapper {
     @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
     @Mapping(target = "sizeOrQuantity", source = "size")
     @Mapping(target = "colorOrFlavor", source = "color")
+    @Mapping(target = "count", source = "quantity")
     public abstract OrderedProduct cartItemToOrderedProduct(CartItem cartItem);
 
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")

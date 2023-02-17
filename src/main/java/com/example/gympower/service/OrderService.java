@@ -9,7 +9,6 @@ import com.example.gympower.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -52,7 +51,7 @@ public class OrderService {
                     .findFirst()
                     .get();
 
-            cartItem.setCount(productOrderDTO.getCount());
+            cartItem.setQuantity(productOrderDTO.getQuantity());
             this.cartItemService.add(cartItem);
         }
 
@@ -85,7 +84,7 @@ public class OrderService {
 
 
         for (CartItem cartItem : user.getCartItems()) {
-            this.wearService.reduceQuantity(cartItem.getWear(), cartItem.getColor(), cartItem.getSize(), cartItem.getCount());
+            this.wearService.reduceQuantity(cartItem.getWear(), cartItem.getColor(), cartItem.getSize(), cartItem.getQuantity());
         }
 
         user.getCartItems().clear();
