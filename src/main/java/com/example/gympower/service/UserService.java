@@ -1,5 +1,6 @@
 package com.example.gympower.service;
 
+import com.example.gympower.model.dto.DisplayUserDTO;
 import com.example.gympower.model.dto.EditCartDTO;
 import com.example.gympower.model.dto.DisplayCartItemDTO;
 import com.example.gympower.model.dto.RegisterDTO;
@@ -196,5 +197,11 @@ public class UserService {
 
     public UserEntity save(UserEntity user) {
         return this.userRepository.save(user);
+    }
+
+    public DisplayUserDTO getUserDetails(String email) {
+        UserEntity user = this.userRepository.findByEmail(email).get();
+
+        return this.userMapper.userToDetailsDTO(user);
     }
 }

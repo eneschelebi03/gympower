@@ -1,11 +1,22 @@
 package com.example.gympower.model.mapper;
 
+import com.example.gympower.model.dto.DisplayUserDTO;
 import com.example.gympower.model.dto.RegisterDTO;
 import com.example.gympower.model.entity.UserEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 @Mapper(componentModel = "spring")
-public interface UserMapper {
+public abstract class UserMapper {
 
-    UserEntity registerDTOToUser(RegisterDTO registerDTO);
+    public abstract UserEntity registerDTOToUser(RegisterDTO registerDTO);
+
+    @Mapping(target = "orders", source = "user", qualifiedByName = "userOrders")
+    public abstract DisplayUserDTO userToDetailsDTO(UserEntity user);
+
+    @Named("userOrders")
+    int userOrders(UserEntity user) {
+        return user.getOrders().size();
+    }
 }
