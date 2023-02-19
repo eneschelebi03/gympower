@@ -71,8 +71,11 @@ public class OrderService {
         }
 
         Address address = this.addressMapper.addressDtoToAddress(orderDTO.getDetails());
-
         address = this.addressService.save(address);
+
+        if (orderDTO.getDetails().isSaveAsPersonal()) {
+            user.setAddress(address);
+        }
 
         Order newOrder = new Order()
                 .setUser(user)

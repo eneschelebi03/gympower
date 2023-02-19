@@ -12,6 +12,8 @@ public class AddressDTO {
 
     private String country;
 
+    private boolean saveAsPersonal;
+
     public String getFullName() {
         return fullName;
     }
@@ -54,6 +56,15 @@ public class AddressDTO {
 
     public AddressDTO setCountry(String country) {
         this.country = country;
+        return this;
+    }
+
+    public boolean isSaveAsPersonal() {
+        return saveAsPersonal;
+    }
+
+    public AddressDTO setSaveAsPersonal(boolean saveAsPersonal) {
+        this.saveAsPersonal = saveAsPersonal;
         return this;
     }
 }

@@ -38,7 +38,8 @@ public class SecurityConfiguration {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/products/**", "/users/user").permitAll()
                 .antMatchers("/offers/carousel", "/users/auth/login", "/users/register",
-                        "/cart/addProduct", "/cart/products", "/cart/removeProduct", "/order/new", "/order/current/products").permitAll()
+                        "/cart/addProduct", "/cart/products", "/cart/removeProduct", "/order/new",
+                        "/order/current/products", "/users/user/details").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .logout()

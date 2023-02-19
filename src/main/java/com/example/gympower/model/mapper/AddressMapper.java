@@ -13,5 +13,5 @@ public interface AddressMapper {
     Address addressDtoToAddress(AddressDTO addressDTO);
 
     @Mapping(target = "address", source = "streetAddress")
-    DisplayAddressDTO addressToDisplayDTO(Address addressDTO);
+    DisplayAddressDTO addressToDisplayDTO(Address address);
 }

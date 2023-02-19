@@ -13,6 +13,7 @@ public abstract class UserMapper {
     public abstract UserEntity registerDTOToUser(RegisterDTO registerDTO);
 
     @Mapping(target = "orders", source = "user", qualifiedByName = "userOrders")
+    @Mapping(target = "address.address", source = "address.streetAddress")
     public abstract DisplayUserDTO userToDetailsDTO(UserEntity user);
 
     @Named("userOrders")

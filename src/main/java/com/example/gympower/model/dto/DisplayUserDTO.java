@@ -2,6 +2,10 @@ package com.example.gympower.model.dto;
 
 public class DisplayUserDTO {
 
+    private String firstName;
+
+    private String lastName;
+
     private String username;
 
     private String email;
@@ -9,6 +13,24 @@ public class DisplayUserDTO {
     private int orders;
 
     private DisplayAddressDTO address;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public DisplayUserDTO setFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public DisplayUserDTO setLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
 
     public String getUsername() {
         return username;
