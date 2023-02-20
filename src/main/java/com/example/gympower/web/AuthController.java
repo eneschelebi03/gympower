@@ -1,6 +1,6 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.LoginDTO;
+import com.example.gympower.model.dto.logic.LoginDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -183,3 +183,10 @@ address.innerHTML = '<div class="main-address-container">' +
     '   <div class="pseudo-container">' +
     '   </div>' +
     '</div>'
+
+let message;
+
+message.innerHTML = ' <span class="material-symbols-outlined"> task_alt </span> \n' +
+    '        <h2 id="successful-order" class="success-message">\n' +
+    '          Order successfully placed\n' +
+    '        </h2>'

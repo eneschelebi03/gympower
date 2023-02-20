@@ -1,7 +1,7 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.EditCartDTO;
-import com.example.gympower.model.dto.DisplayCartItemDTO;
+import com.example.gympower.model.dto.logic.EditCartDTO;
+import com.example.gympower.model.dto.display.DisplayCartItemDTO;
 import com.example.gympower.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

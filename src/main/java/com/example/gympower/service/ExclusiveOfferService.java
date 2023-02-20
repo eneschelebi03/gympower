@@ -1,6 +1,6 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.ActiveOfferDTO;
+import com.example.gympower.model.dto.display.ActiveOfferDTO;
 import com.example.gympower.model.mapper.ExclusiveOfferMapper;
 import com.example.gympower.repository.ExclusiveOfferRepository;
 import org.springframework.stereotype.Service;

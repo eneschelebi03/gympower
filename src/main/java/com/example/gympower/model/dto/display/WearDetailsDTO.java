@@ -1,7 +1,6 @@
-package com.example.gympower.model.dto;
+package com.example.gympower.model.dto.display;
 
 import com.example.gympower.model.entity.products.wear.Color;
-import com.example.gympower.model.entity.products.wear.Size;
 
 import java.util.Set;
 

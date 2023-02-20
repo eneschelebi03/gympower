@@ -1,6 +1,6 @@
 package com.example.gympower.model.mapper;
 
-import com.example.gympower.model.dto.*;
+import com.example.gympower.model.dto.display.*;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.OrderedProduct;
@@ -26,6 +26,7 @@ public abstract class ProductMapper {
     @Mapping(target = "type", source = "cartItem", qualifiedByName = "orderedProductType")
     @Mapping(target = "name", source = "cartItem", qualifiedByName = "orderedProductName")
     @Mapping(target = "price", source = "cartItem", qualifiedByName = "orderedProductPrice")
+    @Mapping(target = "cost", source = "cartItem", qualifiedByName = "orderedProductCost")
     @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
     @Mapping(target = "sizeOrQuantity", source = "size")
     @Mapping(target = "colorOrFlavor", source = "color")
@@ -39,6 +40,17 @@ public abstract class ProductMapper {
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
+
+    @Named("orderedProductCost")
+    double orderedProductCost(CartItem cartItem) {
+        BigDecimal cost = cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst()
+                .get()
+                .getCost();
+
+        return cost.doubleValue();
+    }
 
     @Named("orderedProductPrice")
     double orderedProductPrice(CartItem cartItem) {

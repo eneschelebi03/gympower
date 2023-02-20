@@ -1,6 +1,6 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.DisplayAddressDTO;
+import com.example.gympower.model.dto.display.DisplayAddressDTO;
 import com.example.gympower.model.entity.Address;
 import com.example.gympower.model.entity.Order;
 import com.example.gympower.model.mapper.AddressMapper;

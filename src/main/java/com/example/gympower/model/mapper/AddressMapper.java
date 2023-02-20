@@ -1,7 +1,7 @@
 package com.example.gympower.model.mapper;
 
-import com.example.gympower.model.dto.AddressDTO;
-import com.example.gympower.model.dto.DisplayAddressDTO;
+import com.example.gympower.model.dto.logic.AddressDTO;
+import com.example.gympower.model.dto.display.DisplayAddressDTO;
 import com.example.gympower.model.entity.Address;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

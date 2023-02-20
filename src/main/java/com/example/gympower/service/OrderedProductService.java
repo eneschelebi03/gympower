@@ -1,6 +1,6 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.DisplayOrderedProductDTO;
+import com.example.gympower.model.dto.display.DisplayOrderedProductDTO;
 import com.example.gympower.model.entity.Order;
 import com.example.gympower.model.entity.OrderedProduct;
 import com.example.gympower.model.mapper.ProductMapper;

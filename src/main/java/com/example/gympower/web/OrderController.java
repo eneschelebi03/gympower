@@ -1,9 +1,9 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.DisplayAddressDTO;
-import com.example.gympower.model.dto.DisplayOrderDetailsDTO;
-import com.example.gympower.model.dto.DisplayOrderedProductDTO;
-import com.example.gympower.model.dto.OrderDTO;
+import com.example.gympower.model.dto.display.DisplayAddressDTO;
+import com.example.gympower.model.dto.display.DisplayOrderDetailsDTO;
+import com.example.gympower.model.dto.display.DisplayOrderedProductDTO;
+import com.example.gympower.model.dto.logic.OrderDTO;
 import com.example.gympower.model.entity.Order;
 import com.example.gympower.service.AddressService;
 import com.example.gympower.service.OrderService;

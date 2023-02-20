@@ -1,6 +1,6 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.RegisterDTO;
+import com.example.gympower.model.dto.logic.RegisterDTO;
 import com.example.gympower.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;

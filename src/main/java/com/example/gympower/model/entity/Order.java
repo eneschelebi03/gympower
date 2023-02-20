@@ -21,7 +21,7 @@ public class Order {
     private UserEntity userEntity;
 
     @Column(nullable = false)
-    private LocalDateTime localDateTime = LocalDateTime.now();
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     @ManyToOne
     private Status status;
@@ -30,6 +30,8 @@ public class Order {
     private Address address;
 
     private BigDecimal totalCost;
+
+    private BigDecimal totalIncome;
 
     public Order() {
     }
@@ -79,12 +81,12 @@ public class Order {
         return this;
     }
 
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public Order setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
+    public Order setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
         return this;
     }
 
@@ -103,6 +105,15 @@ public class Order {
 
     public Order setTotalCost(BigDecimal totalCost) {
         this.totalCost = totalCost;
+        return this;
+    }
+
+    public BigDecimal getTotalIncome() {
+        return totalIncome;
+    }
+
+    public Order setTotalIncome(BigDecimal totalIncome) {
+        this.totalIncome = totalIncome;
         return this;
     }
 }

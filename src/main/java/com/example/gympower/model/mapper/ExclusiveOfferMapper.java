@@ -1,6 +1,6 @@
 package com.example.gympower.model.mapper;
 
-import com.example.gympower.model.dto.ActiveOfferDTO;
+import com.example.gympower.model.dto.display.ActiveOfferDTO;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.products.ExclusiveOffer;
 import org.mapstruct.Mapper;

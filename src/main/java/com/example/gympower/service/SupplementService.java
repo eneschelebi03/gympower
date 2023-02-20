@@ -1,7 +1,7 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.AllProductsProductDTO;
-import com.example.gympower.model.dto.CarouselProductDTO;
+import com.example.gympower.model.dto.display.AllProductsProductDTO;
+import com.example.gympower.model.dto.display.CarouselProductDTO;
 import com.example.gympower.model.entity.products.supplements.Supplement;
 import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.SupplementRepository;

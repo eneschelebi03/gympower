@@ -1,8 +1,8 @@
 package com.example.gympower.web;
 
 
-import com.example.gympower.model.dto.ActiveOfferDTO;
-import com.example.gympower.model.dto.CarouselProductDTO;
+import com.example.gympower.model.dto.display.ActiveOfferDTO;
+import com.example.gympower.model.dto.display.CarouselProductDTO;
 import com.example.gympower.service.ExclusiveOfferService;
 import com.example.gympower.service.SupplementService;
 import com.example.gympower.service.WearService;

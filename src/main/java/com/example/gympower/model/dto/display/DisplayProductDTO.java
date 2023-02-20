@@ -1,6 +1,6 @@
-package com.example.gympower.model.dto;
+package com.example.gympower.model.dto.display;
 
-public class CarouselProductDTO {
+public class DisplayProductDTO {
 
     private long id;
 
@@ -12,12 +12,13 @@ public class CarouselProductDTO {
 
     private String pictureUrl;
 
+    private String description;
 
     public long getId() {
         return id;
     }
 
-    public CarouselProductDTO setId(long id) {
+    public DisplayProductDTO setId(long id) {
         this.id = id;
         return this;
     }
@@ -26,7 +27,7 @@ public class CarouselProductDTO {
         return name;
     }
 
-    public CarouselProductDTO setName(String name) {
+    public DisplayProductDTO setName(String name) {
         this.name = name;
         return this;
     }
@@ -35,7 +36,7 @@ public class CarouselProductDTO {
         return rating;
     }
 
-    public CarouselProductDTO setRating(double rating) {
+    public DisplayProductDTO setRating(double rating) {
         this.rating = rating;
         return this;
     }
@@ -44,7 +45,7 @@ public class CarouselProductDTO {
         return price;
     }
 
-    public CarouselProductDTO setPrice(double price) {
+    public DisplayProductDTO setPrice(double price) {
         this.price = price;
         return this;
     }
@@ -53,8 +54,17 @@ public class CarouselProductDTO {
         return pictureUrl;
     }
 
-    public CarouselProductDTO setPictureUrl(String pictureUrl) {
+    public DisplayProductDTO setPictureUrl(String pictureUrl) {
         this.pictureUrl = pictureUrl;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public DisplayProductDTO setDescription(String description) {
+        this.description = description;
         return this;
     }
 }

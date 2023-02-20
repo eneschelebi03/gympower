@@ -1,4 +1,4 @@
-package com.example.gympower.model.dto;
+package com.example.gympower.model.dto.logic;
 
 import java.util.List;
 

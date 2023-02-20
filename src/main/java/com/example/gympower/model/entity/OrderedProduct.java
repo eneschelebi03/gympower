@@ -25,6 +25,8 @@ public class OrderedProduct {
     @Column(nullable = false)
     private String colorOrFlavor;
 
+    private double cost;
+
     private double price;
 
     private int count;
@@ -80,6 +82,15 @@ public class OrderedProduct {
 
     public OrderedProduct setPrice(double price) {
         this.price = price;
+        return this;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public OrderedProduct setCost(double cost) {
+        this.cost = cost;
         return this;
     }
 

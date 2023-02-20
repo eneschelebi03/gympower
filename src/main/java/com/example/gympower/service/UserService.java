@@ -1,9 +1,9 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.DisplayUserDTO;
-import com.example.gympower.model.dto.EditCartDTO;
-import com.example.gympower.model.dto.DisplayCartItemDTO;
-import com.example.gympower.model.dto.RegisterDTO;
+import com.example.gympower.model.dto.display.DisplayUserDTO;
+import com.example.gympower.model.dto.logic.EditCartDTO;
+import com.example.gympower.model.dto.display.DisplayCartItemDTO;
+import com.example.gympower.model.dto.logic.RegisterDTO;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.UserEntity;
 import com.example.gympower.model.entity.UserRole;
@@ -16,7 +16,6 @@ import com.example.gympower.repository.UserRoleRepository;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

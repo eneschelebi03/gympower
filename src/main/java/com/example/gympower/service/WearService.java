@@ -1,8 +1,8 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.AllProductsProductDTO;
-import com.example.gympower.model.dto.CarouselProductDTO;
-import com.example.gympower.model.dto.WearDetailsDTO;
+import com.example.gympower.model.dto.display.AllProductsProductDTO;
+import com.example.gympower.model.dto.display.CarouselProductDTO;
+import com.example.gympower.model.dto.display.WearDetailsDTO;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
 import com.example.gympower.model.entity.products.wear.Color;

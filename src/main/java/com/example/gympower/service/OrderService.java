@@ -1,7 +1,8 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.OrderDTO;
-import com.example.gympower.model.dto.ProductOrderDTO;
+import com.example.gympower.model.dto.display.DisplayFinancesDTO;
+import com.example.gympower.model.dto.logic.OrderDTO;
+import com.example.gympower.model.dto.logic.ProductOrderDTO;
 import com.example.gympower.model.entity.*;
 import com.example.gympower.model.mapper.AddressMapper;
 import com.example.gympower.model.mapper.ProductMapper;
@@ -9,6 +10,7 @@ import com.example.gympower.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 
@@ -60,13 +62,17 @@ public class OrderService {
                 .map(this.productMapper::cartItemToOrderedProduct)
                 .toList();
 
-        double sum = 0.00;
+        double sumCost = 0.00;
+        double sumPrice = 0.00;
         double tax = 1.05;
         for (OrderedProduct orderedProduct : orderedProducts) {
             orderedProduct = this.orderedProductService.save(orderedProduct);
 
             double totalProductPrice = orderedProduct.getPrice() * orderedProduct.getCount();
-            sum += totalProductPrice;
+            sumPrice += totalProductPrice;
+
+            double totalProductCost = orderedProduct.getCost() * orderedProduct.getCount();
+            sumCost += totalProductCost;
 
         }
 
@@ -81,7 +87,8 @@ public class OrderService {
                 .setUser(user)
                 .setOrderedProducts(orderedProducts)
                 .setAddress(address)
-                .setTotalCost(BigDecimal.valueOf(sum * tax));
+                .setTotalIncome(BigDecimal.valueOf(sumPrice * tax))
+                .setTotalCost(BigDecimal.valueOf(sumCost));
 
         this.orderRepository.save(newOrder);
 
@@ -99,8 +106,29 @@ public class OrderService {
     public Order findCurrentOrder(String email) {
         UserEntity byEmail = this.userService.findByEmail(email);
         List<Order> userOrders = byEmail.getOrders();
-        userOrders.sort(Comparator.comparing(Order::getLocalDateTime).reversed());
+        userOrders.sort(Comparator.comparing(Order::getCreatedAt).reversed());
 
         return userOrders.stream().findFirst().get();
+    }
+
+    public DisplayFinancesDTO getRecentFinances() {
+        LocalDateTime yesterday = LocalDateTime.now().minusDays(1);
+        List<Order> recentOrders = this.orderRepository.findByCreatedAtAfter(yesterday);
+
+        double incomeSum = 0.00;
+        double costSum = 0.00;
+        for (Order order : recentOrders) {
+            incomeSum += order.getTotalIncome().doubleValue();
+            costSum += order.getTotalCost().doubleValue();
+        }
+
+        double profit = incomeSum - costSum;
+
+        DisplayFinancesDTO finances = new DisplayFinancesDTO()
+                .setTotalSales(BigDecimal.valueOf(incomeSum))
+                .setCosts(BigDecimal.valueOf(costSum))
+                .setProfit(BigDecimal.valueOf(profit));
+
+        return finances;
     }
 }

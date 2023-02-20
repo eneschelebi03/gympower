@@ -1,6 +1,4 @@
-package com.example.gympower.model.dto;
-
-import java.util.List;
+package com.example.gympower.model.dto.display;
 
 public class DisplayCartItemDTO {
 
