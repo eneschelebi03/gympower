@@ -190,3 +190,21 @@ message.innerHTML = ' <span class="material-symbols-outlined"> task_alt </span> 
     '        <h2 id="successful-order" class="success-message">\n' +
     '          Order successfully placed\n' +
     '        </h2>'
+
+mainCutomers.innerHTML = '<div class="recent-orders">\n' +
+    '                <h2>Customers</h2>\n' +
+    '                <table>\n' +
+    '                    <thead>\n' +
+    '                        <tr>\n' +
+    '                            <th>Name</th>\n' +
+    '                            <th>Username</th>\n' +
+    '                            <th>Phone</th>\n' +
+    '                            <th>Address</th>\n' +
+    '                            <th>Email</th>\n' +
+    '                            <th>Orders</th>\n' +
+    '                        </tr>\n' +
+    '                    </thead>\n' +
+    '                    <tbody>\n' +
+    '                    </tbody>\n' +
+    '                </table>\n' +
+    '            </div>'

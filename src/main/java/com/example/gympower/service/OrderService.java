@@ -1,18 +1,21 @@
 package com.example.gympower.service;
 
 import com.example.gympower.model.dto.display.DisplayFinancesDTO;
+import com.example.gympower.model.dto.display.DisplayRecentOrderDTO;
 import com.example.gympower.model.dto.logic.OrderDTO;
 import com.example.gympower.model.dto.logic.ProductOrderDTO;
 import com.example.gympower.model.entity.*;
 import com.example.gympower.model.mapper.AddressMapper;
+import com.example.gympower.model.mapper.OrderMapper;
 import com.example.gympower.model.mapper.ProductMapper;
 import com.example.gympower.repository.OrderRepository;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class OrderService {
@@ -26,11 +29,12 @@ public class OrderService {
     private final CartItemService cartItemService;
     private final OrderedProductService orderedProductService;
     private final AddressService addressService;
+    private final OrderMapper orderMapper;
 
     public OrderService(OrderRepository orderRepository,
                         UserService userService,
                         WearService wearService,
-                        SupplementService suppService, ProductMapper productMapper, AddressMapper addressMapper, CartItemService cartItemService, OrderedProductService orderedProductService, AddressService addressService) {
+                        SupplementService suppService, ProductMapper productMapper, AddressMapper addressMapper, CartItemService cartItemService, OrderedProductService orderedProductService, AddressService addressService, OrderMapper orderMapper) {
         this.orderRepository = orderRepository;
         this.userService = userService;
         this.wearService = wearService;
@@ -40,6 +44,7 @@ public class OrderService {
         this.cartItemService = cartItemService;
         this.orderedProductService = orderedProductService;
         this.addressService = addressService;
+        this.orderMapper = orderMapper;
     }
 
     public void createOrder(String email, OrderDTO orderDTO) {
@@ -130,5 +135,15 @@ public class OrderService {
                 .setProfit(BigDecimal.valueOf(profit));
 
         return finances;
+    }
+
+    public List<DisplayRecentOrderDTO> getRecentOrders() {
+
+        Sort sort = Sort.by("createdAt").ascending();
+        PageRequest pageRequest = PageRequest.of(0, 7, sort);
+
+        List<Order> recentOrders = this.orderRepository.findFirst7ByOrderByCreatedAtDesc(pageRequest);
+
+        return recentOrders.stream().map(this.orderMapper::orderToRecentOrderDTO).toList();
     }
 }

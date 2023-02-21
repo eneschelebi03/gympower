@@ -1,6 +1,7 @@
 package com.example.gympower.model.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Table(name = "ordered_products")
 @Entity
@@ -111,4 +112,6 @@ public class OrderedProduct {
         this.pictureUrl = pictureUrl;
         return this;
     }
+
+
 }

@@ -18,7 +18,7 @@ public class Order {
     private List<OrderedProduct> orderedProducts = new ArrayList<>();
 
     @ManyToOne
-    private UserEntity userEntity;
+    private UserEntity user;
 
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
@@ -54,12 +54,12 @@ public class Order {
         return this;
     }
 
-    public UserEntity getUserEntity() {
-        return userEntity;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public Order setUserEntity(UserEntity userEntity) {
-        this.userEntity = userEntity;
+    public Order setUser(UserEntity user) {
+        this.user = user;
         return this;
     }
 
@@ -69,15 +69,6 @@ public class Order {
 
     public Order setStatus(Status status) {
         this.status = status;
-        return this;
-    }
-
-    public UserEntity getUser() {
-        return userEntity;
-    }
-
-    public Order setUser(UserEntity userEntity) {
-        this.userEntity = userEntity;
         return this;
     }
 
