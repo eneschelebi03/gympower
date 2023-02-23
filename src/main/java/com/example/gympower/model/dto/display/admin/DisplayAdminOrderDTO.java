@@ -1,9 +1,9 @@
-package com.example.gympower.model.dto.display;
+package com.example.gympower.model.dto.display.admin;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class DisplayRecentOrderDTO {
+public class DisplayAdminOrderDTO {
 
     private long orderId;
 
@@ -17,7 +17,7 @@ public class DisplayRecentOrderDTO {
         return orderId;
     }
 
-    public DisplayRecentOrderDTO setOrderId(long orderId) {
+    public DisplayAdminOrderDTO setOrderId(long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -26,7 +26,7 @@ public class DisplayRecentOrderDTO {
         return userId;
     }
 
-    public DisplayRecentOrderDTO setUserId(long userId) {
+    public DisplayAdminOrderDTO setUserId(long userId) {
         this.userId = userId;
         return this;
     }
@@ -35,7 +35,7 @@ public class DisplayRecentOrderDTO {
         return orderedAt;
     }
 
-    public DisplayRecentOrderDTO setOrderedAt(LocalDateTime orderedAt) {
+    public DisplayAdminOrderDTO setOrderedAt(LocalDateTime orderedAt) {
         this.orderedAt = orderedAt;
         return this;
     }
@@ -44,7 +44,7 @@ public class DisplayRecentOrderDTO {
         return orderItems;
     }
 
-    public DisplayRecentOrderDTO setOrderItems(List<DisplayAdminOrderedProductDTO> orderItems) {
+    public DisplayAdminOrderDTO setOrderItems(List<DisplayAdminOrderedProductDTO> orderItems) {
         this.orderItems = orderItems;
         return this;
     }

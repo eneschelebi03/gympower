@@ -1,12 +1,14 @@
 package com.example.gympower.model.mapper;
 
 import com.example.gympower.model.dto.display.*;
+import com.example.gympower.model.dto.display.admin.DisplayAdminProductDTO;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.OrderedProduct;
 import com.example.gympower.model.entity.enums.ProductCategoriesEnum;
 import com.example.gympower.model.entity.products.supplements.Cut;
 import com.example.gympower.model.entity.products.supplements.Supplement;
+import com.example.gympower.model.entity.products.wear.Color;
 import com.example.gympower.model.entity.products.wear.Wear;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -14,6 +16,7 @@ import org.mapstruct.Named;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -81,7 +84,6 @@ public abstract class ProductMapper {
         return cartItem.getWear().getName();
     }
 
-
     @Named("suppPrice")
     double suppPrice(Supplement supplement) {
         return supplement.getFlavors().stream()
@@ -105,6 +107,15 @@ public abstract class ProductMapper {
                 .get()
                 .getUrl();
     }
+
+
+    @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
+    @Mapping(target = "categories", source = "wear", qualifiedByName = "wearCategories")
+    @Mapping(target = "options", source = "wear", qualifiedByName = "wearColors")
+    @Mapping(target = "price", source = "wear", qualifiedByName = "wearPrices")
+    @Mapping(target = "cost", source = "wear", qualifiedByName = "wearCosts")
+    @Mapping(target = "addedOn", source = "added")
+    public abstract DisplayAdminProductDTO wearToAdminProductDTO(Wear wear);
 
     @Mapping(target = "price", source = "wear", qualifiedByName = "wearPrice")
     @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
@@ -185,6 +196,49 @@ public abstract class ProductMapper {
                 .map(Category::getCategory)
                 .map(ProductCategoriesEnum::name)
                 .collect(Collectors.toSet());
+    }
+
+
+    @Named("wearColors")
+    List<String> wearColors(Wear wear) {
+        return wear.getAvailableColors().stream()
+                .map(Color::getColorName)
+                .toList();
+    }
+
+
+    @Named("wearPrices")
+    String wearCartPrices(Wear wear) {
+        double min = wear.getAvailableColors().stream()
+                .map(Color::getPrice)
+                .map(BigDecimal::doubleValue)
+                .mapToDouble(Double::doubleValue)
+                .min().getAsDouble();
+
+        double max = wear.getAvailableColors().stream()
+                .map(Color::getPrice)
+                .map(BigDecimal::doubleValue)
+                .mapToDouble(Double::doubleValue)
+                .max().getAsDouble();
+
+        return min + " - " + max;
+    }
+
+    @Named("wearCosts")
+    String wearCartCosts(Wear wear) {
+        double min = wear.getAvailableColors().stream()
+                .map(Color::getCost)
+                .map(BigDecimal::doubleValue)
+                .mapToDouble(Double::doubleValue)
+                .min().getAsDouble();
+
+        double max = wear.getAvailableColors().stream()
+                .map(Color::getCost)
+                .map(BigDecimal::doubleValue)
+                .mapToDouble(Double::doubleValue)
+                .max().getAsDouble();
+
+        return min + " - " + max;
     }
 
 }

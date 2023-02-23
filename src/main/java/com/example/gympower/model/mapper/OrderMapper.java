@@ -1,6 +1,6 @@
 package com.example.gympower.model.mapper;
 
-import com.example.gympower.model.dto.display.DisplayRecentOrderDTO;
+import com.example.gympower.model.dto.display.admin.DisplayAdminOrderDTO;
 import com.example.gympower.model.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -12,5 +12,5 @@ public interface OrderMapper {
     @Mapping(target = "orderedAt", source = "createdAt")
     @Mapping(target = "orderId", source = "id")
     @Mapping(target = "userId", source = "user.id")
-    DisplayRecentOrderDTO orderToRecentOrderDTO(Order order);
+    DisplayAdminOrderDTO orderToRecentOrderDTO(Order order);
 }

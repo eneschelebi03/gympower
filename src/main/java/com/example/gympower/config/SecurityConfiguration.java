@@ -40,7 +40,8 @@ public class SecurityConfiguration {
                 .antMatchers("/offers/carousel", "/users/auth/login", "/users/register",
                         "/cart/addProduct", "/cart/products", "/cart/removeProduct", "/order/new",
                         "/order/current/products", "/users/user/details",
-                        "/admin-panel/recent/finances", "/admin-panel/recent/orders").permitAll()
+                        "/admin-panel/recent/finances", "/admin-panel/recent/orders",
+                        "/admin-panel/all/customers", "/admin-panel/all/orders", "/admin-panel/all/products").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .logout()

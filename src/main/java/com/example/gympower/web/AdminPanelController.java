@@ -1,10 +1,12 @@
 package com.example.gympower.web;
 
-import com.example.gympower.model.dto.display.DisplayFinancesDTO;
-import com.example.gympower.model.dto.display.DisplayOrderedProductDTO;
-import com.example.gympower.model.dto.display.DisplayRecentOrderDTO;
+import com.example.gympower.model.dto.display.admin.DisplayAdminOrderDTO;
+import com.example.gympower.model.dto.display.admin.DisplayAdminProductDTO;
+import com.example.gympower.model.dto.display.admin.DisplayFinancesDTO;
+import com.example.gympower.model.dto.display.admin.DisplayUserTableDTO;
 import com.example.gympower.service.OrderService;
-import com.example.gympower.service.OrderedProductService;
+import com.example.gympower.service.ProductService;
+import com.example.gympower.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +19,13 @@ import java.util.List;
 public class AdminPanelController {
 
     private final OrderService orderService;
+    private final UserService userService;
+    private final ProductService productService;
 
-    public AdminPanelController(OrderService orderService) {
+    public AdminPanelController(OrderService orderService, UserService userService, ProductService productService) {
         this.orderService = orderService;
+        this.userService = userService;
+        this.productService = productService;
     }
 
     @GetMapping("/admin-panel/recent/finances")
@@ -31,10 +37,34 @@ public class AdminPanelController {
     }
 
     @GetMapping("/admin-panel/recent/orders")
-    public ResponseEntity<List<DisplayRecentOrderDTO>> getRecentOrders() {
+    public ResponseEntity<List<DisplayAdminOrderDTO>> getRecentOrders() {
 
-         List<DisplayRecentOrderDTO> recentOrders = this.orderService.getRecentOrders();
+         List<DisplayAdminOrderDTO> recentOrders = this.orderService.getRecentOrders();
 
         return ResponseEntity.ok(recentOrders);
+    }
+
+    @GetMapping("/admin-panel/all/customers")
+    public ResponseEntity<List<DisplayUserTableDTO>> getAllUsers() {
+
+        List<DisplayUserTableDTO> users = this.userService.getUsers();
+
+        return ResponseEntity.ok(users);
+    }
+
+    @GetMapping("/admin-panel/all/orders")
+    public ResponseEntity<List<DisplayAdminOrderDTO>> getAllOrders() {
+
+        List<DisplayAdminOrderDTO> recentOrders = this.orderService.getALlOrders();
+
+        return ResponseEntity.ok(recentOrders);
+    }
+
+    @GetMapping("/admin-panel/all/products")
+    public ResponseEntity<List<DisplayAdminProductDTO>> getAllProducts() {
+
+        List<DisplayAdminProductDTO> products = this.productService.getAllProducts();
+
+        return ResponseEntity.ok(products);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.gympower.service;
 
 import com.example.gympower.model.dto.display.DisplayUserDTO;
+import com.example.gympower.model.dto.display.admin.DisplayUserTableDTO;
 import com.example.gympower.model.dto.logic.EditCartDTO;
 import com.example.gympower.model.dto.display.DisplayCartItemDTO;
 import com.example.gympower.model.dto.logic.RegisterDTO;
@@ -202,5 +203,11 @@ public class UserService {
         UserEntity user = this.userRepository.findByEmail(email).get();
 
         return this.userMapper.userToDetailsDTO(user);
+    }
+
+    public List<DisplayUserTableDTO> getUsers() {
+        return this.userRepository.findAll().stream()
+                .map(this.userMapper::userToUserTableDTO)
+                .toList();
     }
 }

@@ -1,7 +1,7 @@
 package com.example.gympower.service;
 
-import com.example.gympower.model.dto.display.DisplayFinancesDTO;
-import com.example.gympower.model.dto.display.DisplayRecentOrderDTO;
+import com.example.gympower.model.dto.display.admin.DisplayAdminOrderDTO;
+import com.example.gympower.model.dto.display.admin.DisplayFinancesDTO;
 import com.example.gympower.model.dto.logic.OrderDTO;
 import com.example.gympower.model.dto.logic.ProductOrderDTO;
 import com.example.gympower.model.entity.*;
@@ -137,7 +137,7 @@ public class OrderService {
         return finances;
     }
 
-    public List<DisplayRecentOrderDTO> getRecentOrders() {
+    public List<DisplayAdminOrderDTO> getRecentOrders() {
 
         Sort sort = Sort.by("createdAt").ascending();
         PageRequest pageRequest = PageRequest.of(0, 7, sort);
@@ -145,5 +145,14 @@ public class OrderService {
         List<Order> recentOrders = this.orderRepository.findFirst7ByOrderByCreatedAtDesc(pageRequest);
 
         return recentOrders.stream().map(this.orderMapper::orderToRecentOrderDTO).toList();
+    }
+
+    public List<DisplayAdminOrderDTO> getALlOrders() {
+
+        List<Order> recentOrders = this.orderRepository.findAll();
+
+        return recentOrders.stream()
+                .map(this.orderMapper::orderToRecentOrderDTO)
+                .toList();
     }
 }

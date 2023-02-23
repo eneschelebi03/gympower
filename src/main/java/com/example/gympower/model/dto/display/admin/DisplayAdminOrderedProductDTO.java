@@ -1,4 +1,4 @@
-package com.example.gympower.model.dto.display;
+package com.example.gympower.model.dto.display.admin;
 
 public class DisplayAdminOrderedProductDTO {
 
