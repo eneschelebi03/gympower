@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Table(name = "colors")
 @Entity
-public class Color {
+public class        Color {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
