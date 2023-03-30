@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: ${MYSQL_PASSWORD:Shadow887!}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/gympower?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: ${MYSQL_USER:root}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
