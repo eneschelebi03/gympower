@@ -18,6 +18,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -725,16 +726,16 @@ public class GympowerAppInit implements CommandLineRunner {
         this.supplementRepository.save(creatineTabs);
         this.supplementRepository.save(alphaMen);
 
-        ExclusiveOffer vitaminOffer = new ExclusiveOffer()
-                .setTitle("Vitamins discount")
-                .setDiscountPercent(10)
-                .setDiscountedCategories(Set.of(categorySupp, categoryVitamin))
-                .setStart(LocalDateTime.of(2022, 12, 5, 0, 0))
-                .setEnd(LocalDateTime.of(2022, 12, 22, 0, 0))
-                .setActive(true)
-                .setExclusivePicture(vitaminDiscount);
-
-        this.exclusiveOfferRepository.save(vitaminOffer);
+//        ExclusiveOffer vitaminOffer = new ExclusiveOffer()
+//                .setTitle("Vitamins discount")
+//                .setDiscountPercent(10)
+//                .setDiscountedCategories(Set.of(categorySupp, categoryVitamin))
+////                .setStart(LocalDate.of(2022, 12, 10))
+////                .setEnd(LocalDate.of(2022, 12, 22))
+//                .setActive(true)
+//                .setExclusivePicture(vitaminDiscount);
+//
+//        this.exclusiveOfferRepository.save(vitaminOffer);
     }
 
     private void wearInit() {
@@ -1905,46 +1906,46 @@ public class GympowerAppInit implements CommandLineRunner {
         this.wearRepository.save(womenSocks);
         this.wearRepository.save(womenLeggings);
 
-        ExclusiveOffer hoodieOffer = new ExclusiveOffer()
-                .setTitle("Hoodie Offer")
-                .setDiscountPercent(15)
-                .setDiscountedCategories(Set.of(categoryHoodie))
-                .setStart(LocalDateTime.of(2022, 12, 4, 0, 0))
-                .setEnd(LocalDateTime.of(2022, 12, 20, 0, 0))
-                .setActive(true)
-                .setExclusivePicture(hoodieDiscount);
-
-        ExclusiveOffer menShortsOffer = new ExclusiveOffer()
-                .setTitle("Mens Shorts Offer")
-                .setDiscountPercent(15)
-                .setDiscountedCategories(Set.of(categoryMen, categoryShorts))
-                .setStart(LocalDateTime.of(2022, 12, 4, 0, 0))
-                .setEnd(LocalDateTime.of(2022, 12, 20, 0, 0))
-                .setActive(true)
-                .setExclusivePicture(mensShortsDiscount);
-
-        ExclusiveOffer menTShirtsOffer = new ExclusiveOffer()
-                .setTitle("Mens TShirts Offer")
-                .setDiscountPercent(15)
-                .setDiscountedCategories(Set.of(categoryMen, categoryTShirt))
-                .setStart(LocalDateTime.of(2022, 12, 5, 0, 0))
-                .setEnd(LocalDateTime.of(2022, 12, 24, 0, 0))
-                .setActive(true)
-                .setExclusivePicture(mensTShirtsDiscount);
-
-        ExclusiveOffer womenLeggingsOffer = new ExclusiveOffer()
-                .setTitle("Women Leggings Offer")
-                .setDiscountPercent(15)
-                .setDiscountedCategories(Set.of(categoryWomen, categoryLeggings))
-                .setStart(LocalDateTime.of(2022, 12, 2, 0, 0))
-                .setEnd(LocalDateTime.of(2022, 12, 27, 0, 0))
-                .setActive(true)
-                .setExclusivePicture(womenLeggingsDiscount);
-
-        this.exclusiveOfferRepository.save(hoodieOffer);
-        this.exclusiveOfferRepository.save(menShortsOffer);
-        this.exclusiveOfferRepository.save(menTShirtsOffer);
-        this.exclusiveOfferRepository.save(womenLeggingsOffer);
+//        ExclusiveOffer hoodieOffer = new ExclusiveOffer()
+//                .setTitle("Hoodie Offer")
+//                .setDiscountPercent(15)
+//                .setDiscountedCategories(Set.of(categoryHoodie))
+////                .setStart(LocalDate.of(2022, 12, 4))
+////                .setEnd(LocalDate.of(2022, 12, 20))
+//                .setActive(true)
+//                .setExclusivePicture(hoodieDiscount);
+//
+//        ExclusiveOffer menShortsOffer = new ExclusiveOffer()
+//                .setTitle("Mens Shorts Offer")
+//                .setDiscountPercent(15)
+//                .setDiscountedCategories(Set.of(categoryMen, categoryShorts))
+////                .setStart(LocalDate.of(2022, 12, 4))
+////                .setEnd(LocalDate.of(2022, 12, 20))
+//                .setActive(true)
+//                .setExclusivePicture(mensShortsDiscount);
+//
+//        ExclusiveOffer menTShirtsOffer = new ExclusiveOffer()
+//                .setTitle("Mens TShirts Offer")
+//                .setDiscountPercent(15)
+//                .setDiscountedCategories(Set.of(categoryMen, categoryTShirt))
+////                .setStart(LocalDate.of(2022, 12, 5))
+////                .setEnd(LocalDate.of(2022, 12, 24))
+//                .setActive(true)
+//                .setExclusivePicture(mensTShirtsDiscount);
+//
+//        ExclusiveOffer womenLeggingsOffer = new ExclusiveOffer()
+//                .setTitle("Women Leggings Offer")
+//                .setDiscountPercent(15)
+//                .setDiscountedCategories(Set.of(categoryWomen, categoryLeggings))
+////                .setStart(LocalDate.of(2022, 12, 2))
+////                .setEnd(LocalDate.of(2022, 12, 27))
+//                .setActive(true)
+//                .setExclusivePicture(womenLeggingsDiscount);
+//
+//        this.exclusiveOfferRepository.save(hoodieOffer);
+//        this.exclusiveOfferRepository.save(menShortsOffer);
+//        this.exclusiveOfferRepository.save(menTShirtsOffer);
+//        this.exclusiveOfferRepository.save(womenLeggingsOffer);
     }
 
     private void initUsers() {

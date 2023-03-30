@@ -4,6 +4,7 @@ import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.Picture;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -28,11 +29,11 @@ public class ExclusiveOffer {
 
     private boolean isActive;
 
-    @Column(nullable = false)
-    private LocalDateTime start;
+//    @Column(nullable = false)
+    private LocalDate start;
 
-    @Column(nullable = false)
-    private LocalDateTime end;
+//    @Column(nullable = false)
+    private LocalDate end;
 
 
     public long getId() {
@@ -89,20 +90,20 @@ public class ExclusiveOffer {
         return this;
     }
 
-    public LocalDateTime getStart() {
+    public LocalDate getStart() {
         return start;
     }
 
-    public ExclusiveOffer setStart(LocalDateTime start) {
+    public ExclusiveOffer setStart(LocalDate start) {
         this.start = start;
         return this;
     }
 
-    public LocalDateTime getEnd() {
+    public LocalDate getEnd() {
         return end;
     }
 
-    public ExclusiveOffer setEnd(LocalDateTime end) {
+    public ExclusiveOffer setEnd(LocalDate end) {
         this.end = end;
         return this;
     }
