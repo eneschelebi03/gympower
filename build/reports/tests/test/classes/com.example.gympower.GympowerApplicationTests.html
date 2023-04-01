@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.143s</div>
+<div class="counter">0.136s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.143s</td>
+<td class="success">0.136s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,21 +87,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:49:06.824 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-17:49:06.835 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-17:49:06.863 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.gympower.GympowerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-17:49:06.873 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.gympower.GympowerApplicationTests], using SpringBootContextLoader
-17:49:06.877 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.gympower.GympowerApplicationTests]: class path resource [com/example/gympower/GympowerApplicationTests-context.xml] does not exist
-17:49:06.878 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.gympower.GympowerApplicationTests]: class path resource [com/example/gympower/GympowerApplicationTestsContext.groovy] does not exist
-17:49:06.878 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.gympower.GympowerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-17:49:06.878 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.gympower.GympowerApplicationTests]: GympowerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:49:06.917 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.gympower.GympowerApplicationTests]
-17:49:06.975 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Shadowwalker\IdeaProjects\Java_Web\gympower\build\classes\java\main\com\example\gympower\GympowerApplication.class]
-17:49:06.976 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.gympower.GympowerApplication for test class com.example.gympower.GympowerApplicationTests
-17:49:07.062 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.gympower.GympowerApplicationTests]: using defaults.
-17:49:07.062 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-17:49:07.079 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@319988b0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d5ae57e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@68759011, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e242b4d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@305f031, org.springframework.test.context.support.DirtiesContextTestExecutionListener@592e843a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1d1f7216, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@423e4cbb, org.springframework.test.context.event.EventPublishingTestExecutionListener@6e16b8b5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@43b4fe19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25ddbbbb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1536602f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4ebea12c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2a1edad4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6256ac4f]
-17:49:07.082 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@89c10b7 testClass = GympowerApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5dbe30be testClass = GympowerApplicationTests, locations = '{}', classes = '{class com.example.gympower.GympowerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@53fd0d10, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2f1de2d6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@289710d9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4c51cf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@18a136ac, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3e84448c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>19:01:53.347 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:01:53.358 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:01:53.386 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.gympower.GympowerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+19:01:53.396 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.gympower.GympowerApplicationTests], using SpringBootContextLoader
+19:01:53.400 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.gympower.GympowerApplicationTests]: class path resource [com/example/gympower/GympowerApplicationTests-context.xml] does not exist
+19:01:53.400 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.gympower.GympowerApplicationTests]: class path resource [com/example/gympower/GympowerApplicationTestsContext.groovy] does not exist
+19:01:53.400 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.gympower.GympowerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:01:53.401 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.gympower.GympowerApplicationTests]: GympowerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:01:53.437 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.gympower.GympowerApplicationTests]
+19:01:53.487 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Shadowwalker\IdeaProjects\Java_Web\gympower\build\classes\java\main\com\example\gympower\GympowerApplication.class]
+19:01:53.488 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.gympower.GympowerApplication for test class com.example.gympower.GympowerApplicationTests
+19:01:53.566 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.gympower.GympowerApplicationTests]: using defaults.
+19:01:53.566 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+19:01:53.580 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@319988b0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d5ae57e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@68759011, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e242b4d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@305f031, org.springframework.test.context.support.DirtiesContextTestExecutionListener@592e843a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1d1f7216, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@423e4cbb, org.springframework.test.context.event.EventPublishingTestExecutionListener@6e16b8b5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@43b4fe19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25ddbbbb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1536602f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4ebea12c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2a1edad4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6256ac4f]
+19:01:53.584 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@89c10b7 testClass = GympowerApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5dbe30be testClass = GympowerApplicationTests, locations = '{}', classes = '{class com.example.gympower.GympowerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@53fd0d10, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2f1de2d6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@289710d9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4c51cf28, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@18a136ac, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3e84448c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -111,18 +111,18 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.3)
 
-2023-03-31 17:49:07.407  INFO 23384 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : Starting GympowerApplicationTests using Java 17.0.3.1 on DESKTOP-G5LI6M0 with PID 23384 (started by Shadowwalker in C:\Users\Shadowwalker\IdeaProjects\Java_Web\gympower)
-2023-03-31 17:49:07.408  INFO 23384 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-03-31 17:49:08.038  INFO 23384 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31 17:49:08.160  INFO 23384 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 16 JPA repository interfaces.
-2023-03-31 17:49:08.679  INFO 23384 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31 17:49:10.799  INFO 23384 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31 17:49:11.007  INFO 23384 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31 17:49:11.072  INFO 23384 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2023-03-31 17:49:11.290  INFO 23384 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-03-31 17:49:11.620  INFO 23384 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-01 19:01:53.892  INFO 20088 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : Starting GympowerApplicationTests using Java 17.0.3.1 on DESKTOP-G5LI6M0 with PID 20088 (started by Shadowwalker in C:\Users\Shadowwalker\IdeaProjects\Java_Web\gympower)
+2023-04-01 19:01:53.893  INFO 20088 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-04-01 19:01:54.486  INFO 20088 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 19:01:54.601  INFO 20088 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 16 JPA repository interfaces.
+2023-04-01 19:01:55.125  INFO 20088 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-01 19:01:57.276  INFO 20088 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-01 19:01:57.446  INFO 20088 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 19:01:57.503  INFO 20088 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-04-01 19:01:57.698  INFO 20088 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-01 19:01:58.044  INFO 20088 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
 Hibernate: alter table cart_items drop constraint FK3ao95yr7xhewf1e3r98qm4nad
-2023-03-31 17:49:13.015  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table cart_items drop constraint FK3ao95yr7xhewf1e3r98qm4nad&quot; via JDBC Statement
+2023-04-01 19:01:59.455  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table cart_items drop constraint FK3ao95yr7xhewf1e3r98qm4nad&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table cart_items drop constraint FK3ao95yr7xhewf1e3r98qm4nad&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -263,7 +263,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;cart_items&q
 	... 121 common frames omitted
 
 Hibernate: alter table colors_pictures drop constraint FKeabma9n2nu8t6l2rnibf2grg7
-2023-03-31 17:49:13.232  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_pictures drop constraint FKeabma9n2nu8t6l2rnibf2grg7&quot; via JDBC Statement
+2023-04-01 19:01:59.672  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_pictures drop constraint FKeabma9n2nu8t6l2rnibf2grg7&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table colors_pictures drop constraint FKeabma9n2nu8t6l2rnibf2grg7&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -404,7 +404,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;colors_pictu
 	... 121 common frames omitted
 
 Hibernate: alter table colors_pictures drop constraint FKpk1icq6a41jhd6sfr0934ni5a
-2023-03-31 17:49:13.452  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_pictures drop constraint FKpk1icq6a41jhd6sfr0934ni5a&quot; via JDBC Statement
+2023-04-01 19:01:59.888  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_pictures drop constraint FKpk1icq6a41jhd6sfr0934ni5a&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table colors_pictures drop constraint FKpk1icq6a41jhd6sfr0934ni5a&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -545,7 +545,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;colors_pictu
 	... 121 common frames omitted
 
 Hibernate: alter table colors_sizes drop constraint FKhvdraymu2bbf8vxoywe2fm69n
-2023-03-31 17:49:13.664  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_sizes drop constraint FKhvdraymu2bbf8vxoywe2fm69n&quot; via JDBC Statement
+2023-04-01 19:02:00.101  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_sizes drop constraint FKhvdraymu2bbf8vxoywe2fm69n&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table colors_sizes drop constraint FKhvdraymu2bbf8vxoywe2fm69n&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -686,7 +686,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;colors_sizes
 	... 121 common frames omitted
 
 Hibernate: alter table colors_sizes drop constraint FKo81a79kr2duq5ig2375yat6p8
-2023-03-31 17:49:13.877  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_sizes drop constraint FKo81a79kr2duq5ig2375yat6p8&quot; via JDBC Statement
+2023-04-01 19:02:00.312  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table colors_sizes drop constraint FKo81a79kr2duq5ig2375yat6p8&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table colors_sizes drop constraint FKo81a79kr2duq5ig2375yat6p8&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -827,7 +827,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;colors_sizes
 	... 121 common frames omitted
 
 Hibernate: alter table comments drop constraint FKn2na60ukhs76ibtpt9burkm27
-2023-03-31 17:49:14.088  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table comments drop constraint FKn2na60ukhs76ibtpt9burkm27&quot; via JDBC Statement
+2023-04-01 19:02:00.523  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table comments drop constraint FKn2na60ukhs76ibtpt9burkm27&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table comments drop constraint FKn2na60ukhs76ibtpt9burkm27&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -968,7 +968,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;comments&quo
 	... 121 common frames omitted
 
 Hibernate: alter table exclusives drop constraint FK3uy5ctno9w6a8k6x7225s1710
-2023-03-31 17:49:14.300  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives drop constraint FK3uy5ctno9w6a8k6x7225s1710&quot; via JDBC Statement
+2023-04-01 19:02:00.735  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives drop constraint FK3uy5ctno9w6a8k6x7225s1710&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives drop constraint FK3uy5ctno9w6a8k6x7225s1710&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1109,7 +1109,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives&q
 	... 121 common frames omitted
 
 Hibernate: alter table exclusives_discounted_categories drop constraint FK9p8hob9hodqxf3aayiejaaxsb
-2023-03-31 17:49:14.513  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FK9p8hob9hodqxf3aayiejaaxsb&quot; via JDBC Statement
+2023-04-01 19:02:00.935  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FK9p8hob9hodqxf3aayiejaaxsb&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FK9p8hob9hodqxf3aayiejaaxsb&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1250,7 +1250,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives_d
 	... 121 common frames omitted
 
 Hibernate: alter table exclusives_discounted_categories drop constraint FKjqo9363v0n85t43ran60pafyi
-2023-03-31 17:49:14.725  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FKjqo9363v0n85t43ran60pafyi&quot; via JDBC Statement
+2023-04-01 19:02:01.149  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FKjqo9363v0n85t43ran60pafyi&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives_discounted_categories drop constraint FKjqo9363v0n85t43ran60pafyi&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1391,7 +1391,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives_d
 	... 121 common frames omitted
 
 Hibernate: alter table flavors_cuts drop constraint FK1w8dag0v34i6eotkux69cx372
-2023-03-31 17:49:14.937  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_cuts drop constraint FK1w8dag0v34i6eotkux69cx372&quot; via JDBC Statement
+2023-04-01 19:02:01.360  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_cuts drop constraint FK1w8dag0v34i6eotkux69cx372&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table flavors_cuts drop constraint FK1w8dag0v34i6eotkux69cx372&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1532,7 +1532,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;flavors_cuts
 	... 121 common frames omitted
 
 Hibernate: alter table flavors_cuts drop constraint FKielfwjqlqrtr2m1lhg7ovfk8
-2023-03-31 17:49:15.213  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_cuts drop constraint FKielfwjqlqrtr2m1lhg7ovfk8&quot; via JDBC Statement
+2023-04-01 19:02:01.573  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_cuts drop constraint FKielfwjqlqrtr2m1lhg7ovfk8&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table flavors_cuts drop constraint FKielfwjqlqrtr2m1lhg7ovfk8&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1673,7 +1673,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;flavors_cuts
 	... 121 common frames omitted
 
 Hibernate: alter table flavors_pictures drop constraint FK70yuudl5hpoec35m5g7l2jxno
-2023-03-31 17:49:15.429  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_pictures drop constraint FK70yuudl5hpoec35m5g7l2jxno&quot; via JDBC Statement
+2023-04-01 19:02:01.790  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_pictures drop constraint FK70yuudl5hpoec35m5g7l2jxno&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table flavors_pictures drop constraint FK70yuudl5hpoec35m5g7l2jxno&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1814,7 +1814,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;flavors_pict
 	... 121 common frames omitted
 
 Hibernate: alter table flavors_pictures drop constraint FKj1nyl2h5efxr0d9cbeid7r0ro
-2023-03-31 17:49:15.640  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_pictures drop constraint FKj1nyl2h5efxr0d9cbeid7r0ro&quot; via JDBC Statement
+2023-04-01 19:02:02.000  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table flavors_pictures drop constraint FKj1nyl2h5efxr0d9cbeid7r0ro&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table flavors_pictures drop constraint FKj1nyl2h5efxr0d9cbeid7r0ro&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -1955,7 +1955,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;flavors_pict
 	... 121 common frames omitted
 
 Hibernate: alter table orders drop constraint FKhlglkvf5i60dv6dn397ethgpt
-2023-03-31 17:49:15.852  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FKhlglkvf5i60dv6dn397ethgpt&quot; via JDBC Statement
+2023-04-01 19:02:02.212  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FKhlglkvf5i60dv6dn397ethgpt&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table orders drop constraint FKhlglkvf5i60dv6dn397ethgpt&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2096,7 +2096,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;orders&quot;
 	... 121 common frames omitted
 
 Hibernate: alter table orders drop constraint FKm5letvn141v0flinbgcc1t74q
-2023-03-31 17:49:16.065  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FKm5letvn141v0flinbgcc1t74q&quot; via JDBC Statement
+2023-04-01 19:02:02.425  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FKm5letvn141v0flinbgcc1t74q&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table orders drop constraint FKm5letvn141v0flinbgcc1t74q&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2237,7 +2237,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;orders&quot;
 	... 121 common frames omitted
 
 Hibernate: alter table orders drop constraint FK32ql8ubntj5uh44ph9659tiih
-2023-03-31 17:49:16.265  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FK32ql8ubntj5uh44ph9659tiih&quot; via JDBC Statement
+2023-04-01 19:02:02.638  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders drop constraint FK32ql8ubntj5uh44ph9659tiih&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table orders drop constraint FK32ql8ubntj5uh44ph9659tiih&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2378,7 +2378,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;orders&quot;
 	... 121 common frames omitted
 
 Hibernate: alter table orders_ordered_products drop constraint FKes02wkofelakv985amq9houxk
-2023-03-31 17:49:16.476  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders_ordered_products drop constraint FKes02wkofelakv985amq9houxk&quot; via JDBC Statement
+2023-04-01 19:02:02.845  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders_ordered_products drop constraint FKes02wkofelakv985amq9houxk&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table orders_ordered_products drop constraint FKes02wkofelakv985amq9houxk&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2519,7 +2519,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;orders_order
 	... 121 common frames omitted
 
 Hibernate: alter table orders_ordered_products drop constraint FKemhx9u25v1efmwpfrqwi43obq
-2023-03-31 17:49:16.688  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders_ordered_products drop constraint FKemhx9u25v1efmwpfrqwi43obq&quot; via JDBC Statement
+2023-04-01 19:02:03.056  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table orders_ordered_products drop constraint FKemhx9u25v1efmwpfrqwi43obq&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table orders_ordered_products drop constraint FKemhx9u25v1efmwpfrqwi43obq&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2660,7 +2660,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;orders_order
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_categories drop constraint FKfjvifatnfmrcxuc0ixi16jgxo
-2023-03-31 17:49:16.905  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_categories drop constraint FKfjvifatnfmrcxuc0ixi16jgxo&quot; via JDBC Statement
+2023-04-01 19:02:03.269  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_categories drop constraint FKfjvifatnfmrcxuc0ixi16jgxo&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_categories drop constraint FKfjvifatnfmrcxuc0ixi16jgxo&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2801,7 +2801,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_c
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_categories drop constraint FKkx0077qsq7y3vx7i4widw08g5
-2023-03-31 17:49:17.128  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_categories drop constraint FKkx0077qsq7y3vx7i4widw08g5&quot; via JDBC Statement
+2023-04-01 19:02:03.476  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_categories drop constraint FKkx0077qsq7y3vx7i4widw08g5&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_categories drop constraint FKkx0077qsq7y3vx7i4widw08g5&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -2942,7 +2942,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_c
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_comments drop constraint FK74k22o8edntgq18n90d2aam1d
-2023-03-31 17:49:17.340  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_comments drop constraint FK74k22o8edntgq18n90d2aam1d&quot; via JDBC Statement
+2023-04-01 19:02:03.744  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_comments drop constraint FK74k22o8edntgq18n90d2aam1d&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_comments drop constraint FK74k22o8edntgq18n90d2aam1d&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3083,7 +3083,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_c
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_comments drop constraint FKpfwjysjncgl8vpx8rkht5xtcr
-2023-03-31 17:49:17.552  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_comments drop constraint FKpfwjysjncgl8vpx8rkht5xtcr&quot; via JDBC Statement
+2023-04-01 19:02:03.957  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_comments drop constraint FKpfwjysjncgl8vpx8rkht5xtcr&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_comments drop constraint FKpfwjysjncgl8vpx8rkht5xtcr&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3224,7 +3224,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_c
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_flavors drop constraint FK6jo4nvovykadeu9a4233rd4tu
-2023-03-31 17:49:17.764  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_flavors drop constraint FK6jo4nvovykadeu9a4233rd4tu&quot; via JDBC Statement
+2023-04-01 19:02:04.167  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_flavors drop constraint FK6jo4nvovykadeu9a4233rd4tu&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_flavors drop constraint FK6jo4nvovykadeu9a4233rd4tu&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3365,7 +3365,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_f
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_flavors drop constraint FKg282iyx0tjl543vjfuqyw2ngf
-2023-03-31 17:49:17.976  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_flavors drop constraint FKg282iyx0tjl543vjfuqyw2ngf&quot; via JDBC Statement
+2023-04-01 19:02:04.380  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_flavors drop constraint FKg282iyx0tjl543vjfuqyw2ngf&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_flavors drop constraint FKg282iyx0tjl543vjfuqyw2ngf&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3506,7 +3506,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_f
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_special_features drop constraint FK3q747d02cntt1vlfegltqqa8x
-2023-03-31 17:49:18.188  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_special_features drop constraint FK3q747d02cntt1vlfegltqqa8x&quot; via JDBC Statement
+2023-04-01 19:02:04.593  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_special_features drop constraint FK3q747d02cntt1vlfegltqqa8x&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_special_features drop constraint FK3q747d02cntt1vlfegltqqa8x&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3647,7 +3647,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_s
 	... 121 common frames omitted
 
 Hibernate: alter table supplement_special_features drop constraint FKoocunmcjlnc7rsfx5mpweu6gc
-2023-03-31 17:49:18.401  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_special_features drop constraint FKoocunmcjlnc7rsfx5mpweu6gc&quot; via JDBC Statement
+2023-04-01 19:02:04.803  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table supplement_special_features drop constraint FKoocunmcjlnc7rsfx5mpweu6gc&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table supplement_special_features drop constraint FKoocunmcjlnc7rsfx5mpweu6gc&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3788,7 +3788,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;supplement_s
 	... 121 common frames omitted
 
 Hibernate: alter table users drop constraint FKe8vydtk7hf0y16bfm558sywbb
-2023-03-31 17:49:18.604  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users drop constraint FKe8vydtk7hf0y16bfm558sywbb&quot; via JDBC Statement
+2023-04-01 19:02:05.013  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users drop constraint FKe8vydtk7hf0y16bfm558sywbb&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users drop constraint FKe8vydtk7hf0y16bfm558sywbb&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -3929,7 +3929,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users&quot; 
 	... 121 common frames omitted
 
 Hibernate: alter table users drop constraint FK5dlgvwejsiy6ah0w4t323u7u3
-2023-03-31 17:49:18.816  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users drop constraint FK5dlgvwejsiy6ah0w4t323u7u3&quot; via JDBC Statement
+2023-04-01 19:02:05.224  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users drop constraint FK5dlgvwejsiy6ah0w4t323u7u3&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users drop constraint FK5dlgvwejsiy6ah0w4t323u7u3&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4070,7 +4070,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users&quot; 
 	... 121 common frames omitted
 
 Hibernate: alter table users_cart_items drop constraint FKiwboyugfsxgi2ic0swowhlh6q
-2023-03-31 17:49:19.030  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_cart_items drop constraint FKiwboyugfsxgi2ic0swowhlh6q&quot; via JDBC Statement
+2023-04-01 19:02:05.437  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_cart_items drop constraint FKiwboyugfsxgi2ic0swowhlh6q&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_cart_items drop constraint FKiwboyugfsxgi2ic0swowhlh6q&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4211,7 +4211,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_cart_i
 	... 121 common frames omitted
 
 Hibernate: alter table users_cart_items drop constraint FKqkx2mgeedt51hyvt2o9nrsktv
-2023-03-31 17:49:19.240  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_cart_items drop constraint FKqkx2mgeedt51hyvt2o9nrsktv&quot; via JDBC Statement
+2023-04-01 19:02:05.660  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_cart_items drop constraint FKqkx2mgeedt51hyvt2o9nrsktv&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_cart_items drop constraint FKqkx2mgeedt51hyvt2o9nrsktv&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4352,7 +4352,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_cart_i
 	... 121 common frames omitted
 
 Hibernate: alter table users_orders drop constraint FK2lnf5jw8p8q0ytkr8dp0mlx6
-2023-03-31 17:49:19.452  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_orders drop constraint FK2lnf5jw8p8q0ytkr8dp0mlx6&quot; via JDBC Statement
+2023-04-01 19:02:05.868  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_orders drop constraint FK2lnf5jw8p8q0ytkr8dp0mlx6&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_orders drop constraint FK2lnf5jw8p8q0ytkr8dp0mlx6&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4493,7 +4493,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_orders
 	... 121 common frames omitted
 
 Hibernate: alter table users_orders drop constraint FKmuqb6d25iv6m3qi3o6mula8vf
-2023-03-31 17:49:19.664  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_orders drop constraint FKmuqb6d25iv6m3qi3o6mula8vf&quot; via JDBC Statement
+2023-04-01 19:02:06.076  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_orders drop constraint FKmuqb6d25iv6m3qi3o6mula8vf&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_orders drop constraint FKmuqb6d25iv6m3qi3o6mula8vf&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4634,7 +4634,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_orders
 	... 121 common frames omitted
 
 Hibernate: alter table users_user_roles drop constraint FKdwlsjl9336fne9vntsddpf6xs
-2023-03-31 17:49:19.876  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_user_roles drop constraint FKdwlsjl9336fne9vntsddpf6xs&quot; via JDBC Statement
+2023-04-01 19:02:06.292  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_user_roles drop constraint FKdwlsjl9336fne9vntsddpf6xs&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_user_roles drop constraint FKdwlsjl9336fne9vntsddpf6xs&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4775,7 +4775,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_user_r
 	... 121 common frames omitted
 
 Hibernate: alter table users_user_roles drop constraint FKmch2wehr2qllj0ub9y4anjs9i
-2023-03-31 17:49:20.088  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_user_roles drop constraint FKmch2wehr2qllj0ub9y4anjs9i&quot; via JDBC Statement
+2023-04-01 19:02:06.504  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table users_user_roles drop constraint FKmch2wehr2qllj0ub9y4anjs9i&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table users_user_roles drop constraint FKmch2wehr2qllj0ub9y4anjs9i&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -4916,7 +4916,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;users_user_r
 	... 121 common frames omitted
 
 Hibernate: alter table wear_available_colors drop constraint FKas2eexyb18oosg9acqiaoy054
-2023-03-31 17:49:20.300  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_available_colors drop constraint FKas2eexyb18oosg9acqiaoy054&quot; via JDBC Statement
+2023-04-01 19:02:06.717  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_available_colors drop constraint FKas2eexyb18oosg9acqiaoy054&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_available_colors drop constraint FKas2eexyb18oosg9acqiaoy054&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5057,7 +5057,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_availab
 	... 121 common frames omitted
 
 Hibernate: alter table wear_available_colors drop constraint FKfdoicf2a0t3bo2fq9qa4awjmt
-2023-03-31 17:49:20.512  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_available_colors drop constraint FKfdoicf2a0t3bo2fq9qa4awjmt&quot; via JDBC Statement
+2023-04-01 19:02:06.928  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_available_colors drop constraint FKfdoicf2a0t3bo2fq9qa4awjmt&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_available_colors drop constraint FKfdoicf2a0t3bo2fq9qa4awjmt&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5198,7 +5198,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_availab
 	... 121 common frames omitted
 
 Hibernate: alter table wear_categories drop constraint FKi51o15au0ai6pqctghaw6xgxj
-2023-03-31 17:49:20.723  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_categories drop constraint FKi51o15au0ai6pqctghaw6xgxj&quot; via JDBC Statement
+2023-04-01 19:02:07.137  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_categories drop constraint FKi51o15au0ai6pqctghaw6xgxj&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_categories drop constraint FKi51o15au0ai6pqctghaw6xgxj&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5339,7 +5339,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_categor
 	... 121 common frames omitted
 
 Hibernate: alter table wear_categories drop constraint FK7mm69nmpq6mtmepv4a18w4mh8
-2023-03-31 17:49:20.935  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_categories drop constraint FK7mm69nmpq6mtmepv4a18w4mh8&quot; via JDBC Statement
+2023-04-01 19:02:07.349  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_categories drop constraint FK7mm69nmpq6mtmepv4a18w4mh8&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_categories drop constraint FK7mm69nmpq6mtmepv4a18w4mh8&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5480,7 +5480,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_categor
 	... 121 common frames omitted
 
 Hibernate: alter table wear_comments drop constraint FKn8l6059s69qxwvbkhmrivf2jo
-2023-03-31 17:49:21.148  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_comments drop constraint FKn8l6059s69qxwvbkhmrivf2jo&quot; via JDBC Statement
+2023-04-01 19:02:07.560  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_comments drop constraint FKn8l6059s69qxwvbkhmrivf2jo&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_comments drop constraint FKn8l6059s69qxwvbkhmrivf2jo&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5621,7 +5621,7 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_comment
 	... 121 common frames omitted
 
 Hibernate: alter table wear_comments drop constraint FKqae2l7hj47vd2yixxl3xa9yqg
-2023-03-31 17:49:21.356  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_comments drop constraint FKqae2l7hj47vd2yixxl3xa9yqg&quot; via JDBC Statement
+2023-04-01 19:02:07.772  WARN 20088 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table wear_comments drop constraint FKqae2l7hj47vd2yixxl3xa9yqg&quot; via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table wear_comments drop constraint FKqae2l7hj47vd2yixxl3xa9yqg&quot; via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
@@ -5762,107 +5762,107 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;wear_comment
 	... 121 common frames omitted
 
 Hibernate: drop table if exists addresses cascade
-2023-03-31 17:49:21.557  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:21.557  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;addresses&quot; does not exist, skipping
+2023-04-01 19:02:07.981  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:07.982  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;addresses&quot; does not exist, skipping
 Hibernate: drop table if exists cart_items cascade
-2023-03-31 17:49:21.763  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:21.764  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;cart_items&quot; does not exist, skipping
+2023-04-01 19:02:08.189  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:08.189  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;cart_items&quot; does not exist, skipping
 Hibernate: drop table if exists categories cascade
-2023-03-31 17:49:21.972  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:21.972  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;categories&quot; does not exist, skipping
+2023-04-01 19:02:08.396  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:08.396  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;categories&quot; does not exist, skipping
 Hibernate: drop table if exists colors cascade
-2023-03-31 17:49:22.181  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:22.181  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors&quot; does not exist, skipping
+2023-04-01 19:02:08.604  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:08.605  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors&quot; does not exist, skipping
 Hibernate: drop table if exists colors_pictures cascade
-2023-03-31 17:49:22.389  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:22.389  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors_pictures&quot; does not exist, skipping
+2023-04-01 19:02:08.812  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:08.812  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors_pictures&quot; does not exist, skipping
 Hibernate: drop table if exists colors_sizes cascade
-2023-03-31 17:49:22.593  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:22.593  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors_sizes&quot; does not exist, skipping
+2023-04-01 19:02:09.020  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:09.020  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;colors_sizes&quot; does not exist, skipping
 Hibernate: drop table if exists comments cascade
-2023-03-31 17:49:22.800  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:22.800  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;comments&quot; does not exist, skipping
+2023-04-01 19:02:09.229  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:09.229  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;comments&quot; does not exist, skipping
 Hibernate: drop table if exists cuts cascade
-2023-03-31 17:49:23.008  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:23.009  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;cuts&quot; does not exist, skipping
+2023-04-01 19:02:09.436  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:09.436  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;cuts&quot; does not exist, skipping
 Hibernate: drop table if exists exclusives cascade
-2023-03-31 17:49:23.217  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:23.217  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;exclusives&quot; does not exist, skipping
+2023-04-01 19:02:09.649  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:09.649  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;exclusives&quot; does not exist, skipping
 Hibernate: drop table if exists exclusives_discounted_categories cascade
-2023-03-31 17:49:23.412  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:23.412  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;exclusives_discounted_categories&quot; does not exist, skipping
+2023-04-01 19:02:09.861  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:09.861  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;exclusives_discounted_categories&quot; does not exist, skipping
 Hibernate: drop table if exists flavors cascade
-2023-03-31 17:49:23.620  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:23.620  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors&quot; does not exist, skipping
+2023-04-01 19:02:10.068  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:10.069  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors&quot; does not exist, skipping
 Hibernate: drop table if exists flavors_cuts cascade
-2023-03-31 17:49:23.837  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:23.838  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors_cuts&quot; does not exist, skipping
+2023-04-01 19:02:10.277  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:10.277  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors_cuts&quot; does not exist, skipping
 Hibernate: drop table if exists flavors_pictures cascade
-2023-03-31 17:49:24.045  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:24.045  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors_pictures&quot; does not exist, skipping
+2023-04-01 19:02:10.485  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:10.485  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;flavors_pictures&quot; does not exist, skipping
 Hibernate: drop table if exists order_statuses cascade
-2023-03-31 17:49:24.254  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:24.255  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;order_statuses&quot; does not exist, skipping
+2023-04-01 19:02:10.692  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:10.692  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;order_statuses&quot; does not exist, skipping
 Hibernate: drop table if exists ordered_products cascade
-2023-03-31 17:49:24.449  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:24.449  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;ordered_products&quot; does not exist, skipping
+2023-04-01 19:02:10.905  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:10.905  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;ordered_products&quot; does not exist, skipping
 Hibernate: drop table if exists orders cascade
-2023-03-31 17:49:24.657  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:24.657  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;orders&quot; does not exist, skipping
+2023-04-01 19:02:11.112  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:11.112  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;orders&quot; does not exist, skipping
 Hibernate: drop table if exists orders_ordered_products cascade
-2023-03-31 17:49:24.929  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:24.929  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;orders_ordered_products&quot; does not exist, skipping
+2023-04-01 19:02:11.320  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:11.320  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;orders_ordered_products&quot; does not exist, skipping
 Hibernate: drop table if exists pictures cascade
-2023-03-31 17:49:25.136  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:25.137  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;pictures&quot; does not exist, skipping
+2023-04-01 19:02:11.528  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:11.528  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;pictures&quot; does not exist, skipping
 Hibernate: drop table if exists sizes cascade
-2023-03-31 17:49:25.344  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:25.344  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;sizes&quot; does not exist, skipping
+2023-04-01 19:02:11.741  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:11.741  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;sizes&quot; does not exist, skipping
 Hibernate: drop table if exists special_features cascade
-2023-03-31 17:49:25.552  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:25.552  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;special_features&quot; does not exist, skipping
+2023-04-01 19:02:11.949  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:11.949  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;special_features&quot; does not exist, skipping
 Hibernate: drop table if exists supplement cascade
-2023-03-31 17:49:25.804  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:25.804  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement&quot; does not exist, skipping
+2023-04-01 19:02:12.157  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:12.157  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement&quot; does not exist, skipping
 Hibernate: drop table if exists supplement_categories cascade
-2023-03-31 17:49:26.012  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:26.012  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_categories&quot; does not exist, skipping
+2023-04-01 19:02:12.365  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:12.365  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_categories&quot; does not exist, skipping
 Hibernate: drop table if exists supplement_comments cascade
-2023-03-31 17:49:26.221  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:26.221  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_comments&quot; does not exist, skipping
+2023-04-01 19:02:12.637  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:12.637  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_comments&quot; does not exist, skipping
 Hibernate: drop table if exists supplement_flavors cascade
-2023-03-31 17:49:26.428  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:26.428  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_flavors&quot; does not exist, skipping
+2023-04-01 19:02:12.845  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:12.845  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_flavors&quot; does not exist, skipping
 Hibernate: drop table if exists supplement_special_features cascade
-2023-03-31 17:49:26.624  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:26.624  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_special_features&quot; does not exist, skipping
+2023-04-01 19:02:13.055  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:13.055  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;supplement_special_features&quot; does not exist, skipping
 Hibernate: drop table if exists user_roles cascade
-2023-03-31 17:49:26.833  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:26.833  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;user_roles&quot; does not exist, skipping
+2023-04-01 19:02:13.264  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:13.265  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;user_roles&quot; does not exist, skipping
 Hibernate: drop table if exists users cascade
-2023-03-31 17:49:27.040  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:27.040  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users&quot; does not exist, skipping
+2023-04-01 19:02:13.472  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:13.473  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users&quot; does not exist, skipping
 Hibernate: drop table if exists users_cart_items cascade
-2023-03-31 17:49:27.249  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:27.249  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_cart_items&quot; does not exist, skipping
+2023-04-01 19:02:13.681  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:13.681  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_cart_items&quot; does not exist, skipping
 Hibernate: drop table if exists users_orders cascade
-2023-03-31 17:49:27.457  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:27.457  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_orders&quot; does not exist, skipping
+2023-04-01 19:02:13.888  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:13.888  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_orders&quot; does not exist, skipping
 Hibernate: drop table if exists users_user_roles cascade
-2023-03-31 17:49:27.664  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:27.665  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_user_roles&quot; does not exist, skipping
+2023-04-01 19:02:14.096  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:14.096  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;users_user_roles&quot; does not exist, skipping
 Hibernate: drop table if exists wear cascade
-2023-03-31 17:49:27.873  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:27.873  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear&quot; does not exist, skipping
+2023-04-01 19:02:14.306  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:14.306  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear&quot; does not exist, skipping
 Hibernate: drop table if exists wear_available_colors cascade
-2023-03-31 17:49:28.080  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:28.081  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_available_colors&quot; does not exist, skipping
+2023-04-01 19:02:14.513  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:14.513  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_available_colors&quot; does not exist, skipping
 Hibernate: drop table if exists wear_categories cascade
-2023-03-31 17:49:28.299  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:28.299  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_categories&quot; does not exist, skipping
+2023-04-01 19:02:14.720  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:14.720  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_categories&quot; does not exist, skipping
 Hibernate: drop table if exists wear_comments cascade
-2023-03-31 17:49:28.505  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2023-03-31 17:49:28.505  WARN 23384 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_comments&quot; does not exist, skipping
+2023-04-01 19:02:14.929  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-04-01 19:02:14.929  WARN 20088 --- [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table &quot;wear_comments&quot; does not exist, skipping
 Hibernate: create table addresses (id  bigserial not null, city varchar(255) not null, country varchar(255) not null, post_code varchar(255) not null, street_address varchar(255) not null, primary key (id))
 Hibernate: create table cart_items (id  bigserial not null, color varchar(255), quantity int4 not null, size varchar(255), wear_id int8, primary key (id))
 Hibernate: create table categories (id  bigserial not null, category varchar(255) not null, description TEXT, primary key (id))
@@ -5871,147 +5871,7 @@ Hibernate: create table colors_pictures (color_id int8 not null, pictures_id int
 Hibernate: create table colors_sizes (color_id int8 not null, sizes_id int8 not null, primary key (color_id, sizes_id))
 Hibernate: create table comments (id  bigserial not null, approved boolean not null, content TEXT not null, written timestamp, author_id int8, primary key (id))
 Hibernate: create table cuts (id  bigserial not null, cost numeric(19, 2) not null, price numeric(19, 2) not null, produced int4 not null, quantity float8 not null, unit varchar(255) not null, primary key (id))
-Hibernate: create table exclusives (id  bigserial not null, discount_percent int4 not null, end date, is_active boolean not null, start date, title varchar(255) not null, exclusive_picture_id int8, primary key (id))
-2023-03-31 17:49:30.311  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;create table exclusives (id  bigserial not null, discount_percent int4 not null, end date, is_active boolean not null, start date, title varchar(255) not null, exclusive_picture_id int8, primary key (id))&quot; via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;create table exclusives (id  bigserial not null, discount_percent int4 not null, end date, is_active boolean not null, start date, title varchar(255) not null, exclusive_picture_id int8, primary key (id))&quot; via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-2.7.3.jar:2.7.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near &quot;end&quot;
-  Position: 82
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279) ~[postgresql-42.2.27.jar:42.2.27]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	... 120 common frames omitted
-
+Hibernate: create table exclusives (id  bigserial not null, discount_percent int4 not null, end_date date, is_active boolean not null, start_date date, title varchar(255) not null, exclusive_picture_id int8, primary key (id))
 Hibernate: create table exclusives_discounted_categories (exclusive_offer_id int8 not null, discounted_categories_id int8 not null, primary key (exclusive_offer_id, discounted_categories_id))
 Hibernate: create table flavors (id  bigserial not null, flavor_name varchar(255) not null, is_available boolean not null, primary key (id))
 Hibernate: create table flavors_cuts (flavor_id int8 not null, cuts_id int8 not null, primary key (flavor_id, cuts_id))
@@ -6039,145 +5899,6 @@ Hibernate: create table wear_categories (wear_id int8 not null, categories_id in
 Hibernate: create table wear_comments (wear_id int8 not null, comments_id int8 not null, primary key (wear_id, comments_id))
 Hibernate: alter table categories add constraint UK_5ky4frjmcobbiayt5jyx53mff unique (category)
 Hibernate: alter table exclusives add constraint UK_ldheikqejvsv2uqbmevf2gnpo unique (title)
-2023-03-31 17:49:35.816  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives add constraint UK_ldheikqejvsv2uqbmevf2gnpo unique (title)&quot; via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives add constraint UK_ldheikqejvsv2uqbmevf2gnpo unique (title)&quot; via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:361) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-2.7.3.jar:2.7.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives&quot; does not exist
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279) ~[postgresql-42.2.27.jar:42.2.27]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	... 120 common frames omitted
-
 Hibernate: alter table supplement add constraint UK_dm44cd157ve6nsbmfkpssp0p unique (name)
 Hibernate: alter table supplement_comments add constraint UK_3mi62j0jau7jbt46n8i3ka478 unique (comments_id)
 Hibernate: alter table users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
@@ -6195,286 +5916,8 @@ Hibernate: alter table colors_sizes add constraint FKhvdraymu2bbf8vxoywe2fm69n f
 Hibernate: alter table colors_sizes add constraint FKo81a79kr2duq5ig2375yat6p8 foreign key (color_id) references colors
 Hibernate: alter table comments add constraint FKn2na60ukhs76ibtpt9burkm27 foreign key (author_id) references users
 Hibernate: alter table exclusives add constraint FK3uy5ctno9w6a8k6x7225s1710 foreign key (exclusive_picture_id) references pictures
-2023-03-31 17:49:39.216  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives add constraint FK3uy5ctno9w6a8k6x7225s1710 foreign key (exclusive_picture_id) references pictures&quot; via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives add constraint FK3uy5ctno9w6a8k6x7225s1710 foreign key (exclusive_picture_id) references pictures&quot; via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:389) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-2.7.3.jar:2.7.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives&quot; does not exist
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279) ~[postgresql-42.2.27.jar:42.2.27]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	... 120 common frames omitted
-
 Hibernate: alter table exclusives_discounted_categories add constraint FK9p8hob9hodqxf3aayiejaaxsb foreign key (discounted_categories_id) references categories
 Hibernate: alter table exclusives_discounted_categories add constraint FKjqo9363v0n85t43ran60pafyi foreign key (exclusive_offer_id) references exclusives
-2023-03-31 17:49:39.624  WARN 23384 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;alter table exclusives_discounted_categories add constraint FKjqo9363v0n85t43ran60pafyi foreign key (exclusive_offer_id) references exclusives&quot; via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL &quot;alter table exclusives_discounted_categories add constraint FKjqo9363v0n85t43ran60pafyi foreign key (exclusive_offer_id) references exclusives&quot; via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:389) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:132) ~[spring-boot-test-2.7.3.jar:2.7.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.22.jar:5.3.22]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.postgresql.util.PSQLException: ERROR: relation &quot;exclusives&quot; does not exist
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284) ~[postgresql-42.2.27.jar:42.2.27]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279) ~[postgresql-42.2.27.jar:42.2.27]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
-	... 120 common frames omitted
-
 Hibernate: alter table flavors_cuts add constraint FK1w8dag0v34i6eotkux69cx372 foreign key (cuts_id) references cuts
 Hibernate: alter table flavors_cuts add constraint FKielfwjqlqrtr2m1lhg7ovfk8 foreign key (flavor_id) references flavors
 Hibernate: alter table flavors_pictures add constraint FK70yuudl5hpoec35m5g7l2jxno foreign key (pictures_id) references pictures
@@ -6506,11 +5949,11 @@ Hibernate: alter table wear_categories add constraint FKi51o15au0ai6pqctghaw6xgx
 Hibernate: alter table wear_categories add constraint FK7mm69nmpq6mtmepv4a18w4mh8 foreign key (wear_id) references wear
 Hibernate: alter table wear_comments add constraint FKn8l6059s69qxwvbkhmrivf2jo foreign key (comments_id) references comments
 Hibernate: alter table wear_comments add constraint FKqae2l7hj47vd2yixxl3xa9yqg foreign key (wear_id) references wear
-2023-03-31 17:49:45.795  INFO 23384 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31 17:49:45.803  INFO 23384 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31 17:49:47.248  INFO 23384 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24bc06dd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26d02dc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@53086bdc, org.springframework.security.web.header.HeaderWriterFilter@321558f8, org.springframework.security.web.authentication.logout.LogoutFilter@2ffaa711, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3829306d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28effa3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24d7c365, org.springframework.security.web.session.SessionManagementFilter@706c2726, org.springframework.security.web.access.ExceptionTranslationFilter@15ae31b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27c49f54]
-2023-03-31 17:49:47.516  WARN 23384 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31 17:49:48.522  INFO 23384 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : Started GympowerApplicationTests in 41.406 seconds (JVM running for 42.486)
+2023-04-01 19:02:32.055  INFO 20088 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 19:02:32.062  INFO 20088 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 19:02:33.238  INFO 20088 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4246f904, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b01b3f8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6de2344a, org.springframework.security.web.header.HeaderWriterFilter@cf0bc92, org.springframework.security.web.authentication.logout.LogoutFilter@7b6b8cea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fb05c07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@238c63df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27c49f54, org.springframework.security.web.session.SessionManagementFilter@15ae31b, org.springframework.security.web.access.ExceptionTranslationFilter@46c61d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28da5c4d]
+2023-04-01 19:02:33.524  WARN 20088 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 19:02:34.391  INFO 20088 --- [    Test worker] c.e.gympower.GympowerApplicationTests    : Started GympowerApplicationTests in 40.773 seconds (JVM running for 41.762)
 Hibernate: insert into cuts (cost, price, produced, quantity, unit) values (?, ?, ?, ?, ?)
 Hibernate: insert into cuts (cost, price, produced, quantity, unit) values (?, ?, ?, ?, ?)
 Hibernate: insert into cuts (cost, price, produced, quantity, unit) values (?, ?, ?, ?, ?)
@@ -7375,7 +6818,7 @@ Hibernate: insert into users_user_roles (user_entity_id, user_roles_id) values (
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5</a> at Mar 31, 2023, 5:53:56 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5</a> at Apr 1, 2023, 7:06:37 PM</p>
 </div>
 </div>
 </body>

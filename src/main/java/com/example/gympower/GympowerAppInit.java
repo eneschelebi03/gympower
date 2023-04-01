@@ -730,8 +730,8 @@ public class GympowerAppInit implements CommandLineRunner {
 //                .setTitle("Vitamins discount")
 //                .setDiscountPercent(10)
 //                .setDiscountedCategories(Set.of(categorySupp, categoryVitamin))
-////                .setStart(LocalDate.of(2022, 12, 10))
-////                .setEnd(LocalDate.of(2022, 12, 22))
+////                .setStartDate(LocalDate.of(2022, 12, 10))
+////                .setEndDate(LocalDate.of(2022, 12, 22))
 //                .setActive(true)
 //                .setExclusivePicture(vitaminDiscount);
 //
@@ -1910,8 +1910,8 @@ public class GympowerAppInit implements CommandLineRunner {
 //                .setTitle("Hoodie Offer")
 //                .setDiscountPercent(15)
 //                .setDiscountedCategories(Set.of(categoryHoodie))
-////                .setStart(LocalDate.of(2022, 12, 4))
-////                .setEnd(LocalDate.of(2022, 12, 20))
+////                .setStartDate(LocalDate.of(2022, 12, 4))
+////                .setEndDate(LocalDate.of(2022, 12, 20))
 //                .setActive(true)
 //                .setExclusivePicture(hoodieDiscount);
 //
@@ -1919,8 +1919,8 @@ public class GympowerAppInit implements CommandLineRunner {
 //                .setTitle("Mens Shorts Offer")
 //                .setDiscountPercent(15)
 //                .setDiscountedCategories(Set.of(categoryMen, categoryShorts))
-////                .setStart(LocalDate.of(2022, 12, 4))
-////                .setEnd(LocalDate.of(2022, 12, 20))
+////                .setStartDate(LocalDate.of(2022, 12, 4))
+////                .setEndDate(LocalDate.of(2022, 12, 20))
 //                .setActive(true)
 //                .setExclusivePicture(mensShortsDiscount);
 //
@@ -1928,8 +1928,8 @@ public class GympowerAppInit implements CommandLineRunner {
 //                .setTitle("Mens TShirts Offer")
 //                .setDiscountPercent(15)
 //                .setDiscountedCategories(Set.of(categoryMen, categoryTShirt))
-////                .setStart(LocalDate.of(2022, 12, 5))
-////                .setEnd(LocalDate.of(2022, 12, 24))
+////                .setStartDate(LocalDate.of(2022, 12, 5))
+////                .setEndDate(LocalDate.of(2022, 12, 24))
 //                .setActive(true)
 //                .setExclusivePicture(mensTShirtsDiscount);
 //
@@ -1937,8 +1937,8 @@ public class GympowerAppInit implements CommandLineRunner {
 //                .setTitle("Women Leggings Offer")
 //                .setDiscountPercent(15)
 //                .setDiscountedCategories(Set.of(categoryWomen, categoryLeggings))
-////                .setStart(LocalDate.of(2022, 12, 2))
-////                .setEnd(LocalDate.of(2022, 12, 27))
+////                .setStartDate(LocalDate.of(2022, 12, 2))
+////                .setEndDate(LocalDate.of(2022, 12, 27))
 //                .setActive(true)
 //                .setExclusivePicture(womenLeggingsDiscount);
 //
