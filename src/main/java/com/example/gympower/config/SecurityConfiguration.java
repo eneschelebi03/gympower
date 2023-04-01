@@ -46,22 +46,9 @@ public class SecurityConfiguration {
                 .and()
                 .logout()
                 .logoutUrl("/users/logout")
-                .logoutSuccessUrl("http://127.0.0.1:5500/html/index.html")
+                .logoutSuccessUrl("https://gympower.onrender.com")
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID");
-//                .and().
-//                // configuration of form login
-//                        formLogin().
-//                // the custom login form
-//                        loginPage("/users/auth/login").
-//                // the name of the username form field
-//                        usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY).
-//                // the name of the password form field
-//                        passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY).
-//                // where to go in case that the login is successful
-//                        defaultSuccessUrl("http://127.0.0.1:5500/html/index.html").
-//                // where to go in case that the login failed
-//                        failureForwardUrl("/users/login-error");
 
         return httpSecurity.build();
     }
