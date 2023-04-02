@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: gympower_database_user
-    url: jdbc:postgresql://${POSTGRES_URL}:5432/gympower_database
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://dpg-cgj06horjeniukc3ug1g-a.oregon-postgres.render.com:5432/gympower_database
+    password: 5Sy7kIXK91mNcJaQtrPPILyCCDja7pu4
   jpa:
     properties:
       hibernate:
