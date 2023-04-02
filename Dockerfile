@@ -1,6 +1,7 @@
+FROM openjdk:17-jdk
 
-FROM amazoncorretto:17.0.6
+COPY build/libs/*.jar app.jar
 
-COPY --from=build build/libs/*.jar.jar app.jar
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
