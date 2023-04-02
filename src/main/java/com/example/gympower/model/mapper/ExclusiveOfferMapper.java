@@ -19,7 +19,7 @@ public abstract class ExclusiveOfferMapper {
 
     Set<String> discountedCategories(ExclusiveOffer exclusiveOffer) {
         return exclusiveOffer.getDiscountedCategories().stream()
-                .map(Category::getCategory)
+                .map(Category::getCategoryName)
                 .map(Enum::name)
                 .collect(Collectors.toSet());
     }

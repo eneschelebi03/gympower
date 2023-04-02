@@ -69,7 +69,7 @@ public abstract class ProductMapper {
     @Named("orderedProductType")
     String orderedProductType(CartItem cartItem) {
         if (cartItem.getWear().getCategories().stream()
-                .map(c -> c.getCategory().name())
+                .map(c -> c.getCategoryName().name())
                 .toList()
                 .contains("WEAR")
         ) {
@@ -193,7 +193,7 @@ public abstract class ProductMapper {
     @Named("wearCategories")
     Set<String> wearCategories(Wear wear) {
         return wear.getCategories().stream()
-                .map(Category::getCategory)
+                .map(Category::getCategoryName)
                 .map(ProductCategoriesEnum::name)
                 .collect(Collectors.toSet());
     }

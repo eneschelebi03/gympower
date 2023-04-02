@@ -19,7 +19,6 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Set;
 
 @Component
@@ -541,20 +540,20 @@ public class GympowerAppInit implements CommandLineRunner {
 
 
         Category categorySupp = new Category()
-                .setCategory(ProductCategoriesEnum.SUPPLEMENT)
+                .setCategoryName(ProductCategoriesEnum.SUPPLEMENT)
                 .setDescription("You can choose from our extremely wide specter of supplements that are tested " +
                         "and widely chosen amongst the gym society");
 
         Category categoryProtein = new Category()
-                .setCategory(ProductCategoriesEnum.PROTEIN)
+                .setCategoryName(ProductCategoriesEnum.PROTEIN)
                 .setDescription("The best way to improve the `quality of your training and gain muscle faster.");
 
         Category categoryBar = new Category()
-                .setCategory(ProductCategoriesEnum.BAR)
+                .setCategoryName(ProductCategoriesEnum.BAR)
                 .setDescription("You feel hungry but don't want to eat too much. We have the perfect healthy snack!");
 
         Category categoryVitamin = new Category()
-                .setCategory(ProductCategoriesEnum.VITAMIN)
+                .setCategoryName(ProductCategoriesEnum.VITAMIN)
                 .setDescription("Vitamins are important for your trainings and overall well-being. You can choose from our wide range " +
                         "of vitamins.");
 
@@ -799,62 +798,62 @@ public class GympowerAppInit implements CommandLineRunner {
         uk912 = this.sizeRepository.save(uk912);
 
         Category categoryWear = new Category()
-                .setCategory(ProductCategoriesEnum.WEAR)
+                .setCategoryName(ProductCategoriesEnum.WEAR)
                 .setDescription("Choose from our wide range of sports clothing");
 
         Category categoryMen = new Category()
-                .setCategory(ProductCategoriesEnum.MENS)
+                .setCategoryName(ProductCategoriesEnum.MENS)
                 .setDescription("The best for the men");
 
         Category categoryWomen = new Category()
-                .setCategory(ProductCategoriesEnum.WOMENS)
+                .setCategoryName(ProductCategoriesEnum.WOMENS)
                 .setDescription("The best for the women");
 
         Category categoryTShirt = new Category()
-                .setCategory(ProductCategoriesEnum.T_SHIRT)
+                .setCategoryName(ProductCategoriesEnum.T_SHIRT)
                 .setDescription("To feel the movement freely");
 
         Category categoryLongSleeve = new Category()
-                .setCategory(ProductCategoriesEnum.LONG_SLEEVE)
+                .setCategoryName(ProductCategoriesEnum.LONG_SLEEVE)
                 .setDescription("Made from lightweight and stretch material");
 
         Category categoryHoodie = new Category()
-                .setCategory(ProductCategoriesEnum.HOODIE)
+                .setCategoryName(ProductCategoriesEnum.HOODIE)
                 .setDescription("Made from quality and breathing materials, so you can feel comfy in every situation.");
 
         Category categoryJoggers = new Category()
-                .setCategory(ProductCategoriesEnum.JOGGING)
+                .setCategoryName(ProductCategoriesEnum.JOGGING)
                 .setDescription("Fulfill every need of the training person.");
 
         Category categoryShorts = new Category()
-                .setCategory(ProductCategoriesEnum.SHORTS)
+                .setCategoryName(ProductCategoriesEnum.SHORTS)
                 .setDescription("Made mainly for training since they are made from breathing materials");
 
         Category categoryJacket = new Category()
-                .setCategory(ProductCategoriesEnum.JACKET)
+                .setCategoryName(ProductCategoriesEnum.JACKET)
                 .setDescription("You want to go out? You go out? We have a jacket for every situation");
 
         Category categoryZipTop = new Category()
-                .setCategory(ProductCategoriesEnum.ZIP_TOP);
+                .setCategoryName(ProductCategoriesEnum.ZIP_TOP);
 
         Category categorySportsBra = new Category()
-                .setCategory(ProductCategoriesEnum.SPORTS_BRA)
+                .setCategoryName(ProductCategoriesEnum.SPORTS_BRA)
                 .setDescription("Our comfortable sport bras are filling you with confidence every step of your way");
 
         Category categoryGilet = new Category()
-                .setCategory(ProductCategoriesEnum.GILET)
+                .setCategoryName(ProductCategoriesEnum.GILET)
                 .setDescription("Colder weather is no more an issue with our collection of gilets");
 
         Category categorySocks = new Category()
-                .setCategory(ProductCategoriesEnum.SOCKS)
+                .setCategoryName(ProductCategoriesEnum.SOCKS)
                 .setDescription(null);
 
         Category categoryUnderWear = new Category()
-                .setCategory(ProductCategoriesEnum.UNDERWEAR)
+                .setCategoryName(ProductCategoriesEnum.UNDERWEAR)
                 .setDescription("It is important to have comfortable underwear that helps the air circulation and prevents from sweating");
 
         Category categoryLeggings = new Category()
-                .setCategory(ProductCategoriesEnum.LEGGINGS)
+                .setCategoryName(ProductCategoriesEnum.LEGGINGS)
                 .setDescription("The gym leggings are a total hit. You can wear them in the gym, while jogging, " +
                         "during yoga session or any other sports activity");
 

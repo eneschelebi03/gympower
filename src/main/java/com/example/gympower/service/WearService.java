@@ -57,7 +57,7 @@ public class WearService {
     public List<CarouselProductDTO> findRelatedProducts(long id) {
         List<ProductCategoriesEnum> wantedCategories = this.wearRepository.findCategoriesByWearId(id)
                 .stream()
-                .map(Category::getCategory)
+                .map(Category::getCategoryName)
                 .toList();
 
         Random rand = new Random();
@@ -68,7 +68,7 @@ public class WearService {
 
 
 
-            return this.wearRepository.findTop4ByCategoriesCategoryAndIdNot(wantedCategory, id).stream()
+            return this.wearRepository.findTop4ByCategoriesCategoryNameAndIdNot(wantedCategory, id).stream()
                     .map(this.productMapper::wearToTopProductDTO)
                     .collect(Collectors.toList());
     }

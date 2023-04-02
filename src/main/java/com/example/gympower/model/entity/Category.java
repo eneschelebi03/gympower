@@ -13,7 +13,7 @@ public class Category {
 
     @Enumerated(EnumType.STRING)
     @Column(unique = true, nullable = false)
-    private ProductCategoriesEnum category;
+    private ProductCategoriesEnum categoryName;
 
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -21,12 +21,12 @@ public class Category {
     public Category() {
     }
 
-    public ProductCategoriesEnum getCategory() {
-        return category;
+    public ProductCategoriesEnum getCategoryName() {
+        return categoryName;
     }
 
-    public Category setCategory(ProductCategoriesEnum category) {
-        this.category = category;
+    public Category setCategoryName(ProductCategoriesEnum categoryName) {
+        this.categoryName = categoryName;
         return this;
     }
 

@@ -17,5 +17,5 @@ public interface WearRepository extends JpaRepository<Wear, Long> {
     @Query(value = "select w.categories from Wear w where w.id = :id")
     Set<Category> findCategoriesByWearId(long id);
 
-    List<Wear> findTop4ByCategoriesCategoryAndIdNot(ProductCategoriesEnum category, long id);
+    List<Wear> findTop4ByCategoriesCategoryNameAndIdNot(ProductCategoriesEnum category, long id);
 }
