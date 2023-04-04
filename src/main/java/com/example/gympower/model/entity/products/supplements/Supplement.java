@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "supplement")
+@Table(name = "supplements")
 public class Supplement extends Product {
 
     @ManyToMany
