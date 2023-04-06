@@ -1,18 +1,22 @@
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    username: ${PG_USERNAME:postgres}
-    url: jdbc:postgresql://${PG_URL:localhost}:5432/${PG_DATABASE:gympower_pg}
-    password: ${PG_PASSWORD:1234}
+      driverClassName: com.mysql.cj.jdbc.Driver
+      password: Shadow887!
+#      url: jdbc:mysql://gympower-db.cug9cgnskdxn.eu-north-1.rds.amazonaws.com:3306/gympower?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+#      username: admin
+      url: jdbc:mysql://localhost:3306/gympower?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+      username: root
+
   jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create-drop
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
-    show-sql: 'true'
+        format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
 
-server:
-  tomcat:
-    accesslog:
-      enabled: 'true'
+  sql:
+    init:
+      mode: always

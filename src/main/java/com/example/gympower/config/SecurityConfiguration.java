@@ -36,7 +36,7 @@ public class SecurityConfiguration {
         httpSecurity
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/products/**", "/users/user").permitAll()
+                .antMatchers(HttpMethod.GET, "/products/**", "/users/user", "/").permitAll()
                 .antMatchers("/offers/carousel", "/users/auth/login", "/users/register",
                         "/cart/addProduct", "/cart/products", "/cart/removeProduct", "/order/new",
                         "/order/current/products", "/users/user/details",

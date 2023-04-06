@@ -35,6 +35,11 @@ public class HomeController {
         return ResponseEntity.ok(carouselOffers);
     }
 
+    @GetMapping("/")
+    public ResponseEntity<String> getWelcomeMessage() {
+        return ResponseEntity.ok("Welcome to GymPower!");
+    }
+
     @GetMapping("/products/topSupps")
     public ResponseEntity<List<CarouselProductDTO>> getTopSupplements() {
 
