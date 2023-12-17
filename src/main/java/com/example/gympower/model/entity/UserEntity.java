@@ -1,6 +1,7 @@
 package com.example.gympower.model.entity;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +25,10 @@ public class UserEntity {
     private String username;
     private String firstName;
     private String lastName;
+
+
+    @Column(nullable = false)
+    private LocalDateTime registeredAt = LocalDateTime.now();
 
     @Column(unique = true)
     private String phoneNumber;
@@ -160,6 +165,15 @@ public class UserEntity {
 
     public UserEntity setCartItems(List<CartItem> cartItems) {
         this.cartItems = cartItems;
+        return this;
+    }
+
+    public LocalDateTime getRegisteredAt() {
+        return registeredAt;
+    }
+
+    public UserEntity setRegisteredAt(LocalDateTime registeredAt) {
+        this.registeredAt = registeredAt;
         return this;
     }
 }

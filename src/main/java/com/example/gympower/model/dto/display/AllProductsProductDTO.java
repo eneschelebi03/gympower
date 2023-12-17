@@ -9,6 +9,8 @@ public class AllProductsProductDTO {
 
     private double price;
 
+    private int discount;
+
     private String pictureUrl;
 
     private String description;
@@ -64,6 +66,15 @@ public class AllProductsProductDTO {
 
     public AllProductsProductDTO setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public AllProductsProductDTO setDiscount(int discount) {
+        this.discount = discount;
         return this;
     }
 }

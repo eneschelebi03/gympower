@@ -3,12 +3,14 @@ package com.example.gympower.model.entity.products.wear;
 import com.example.gympower.model.entity.Picture;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 import java.util.Set;
 
 @Table(name = "colors")
 @Entity
-public class        Color {
+public class Color {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +27,11 @@ public class        Color {
 
     @Column(nullable = false)
     private BigDecimal price;
+
+    @Column
+    @Min(5)
+    @Max(70)
+    private int discount;
 
     @ManyToMany
     private Set<Size> sizes;
@@ -106,6 +113,15 @@ public class        Color {
 
     public Color setColorCode(String colorCode) {
         this.colorCode = colorCode;
+        return this;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public Color setDiscount(int discount) {
+        this.discount = discount;
         return this;
     }
 }

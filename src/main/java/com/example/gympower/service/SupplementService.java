@@ -16,10 +16,12 @@ public class SupplementService {
     private final SupplementRepository supplementRepository;
 
     private final ProductMapper productMapper;
+    private final CutService cutService;
 
-    public SupplementService(SupplementRepository supplementRepository, ProductMapper productMapper) {
+    public SupplementService(SupplementRepository supplementRepository, ProductMapper productMapper, CutService cutService) {
         this.supplementRepository = supplementRepository;
         this.productMapper = productMapper;
+        this.cutService = cutService;
     }
 
     public Supplement findById(long id) {
@@ -38,4 +40,5 @@ public class SupplementService {
                 .map(this.productMapper::supplementToAllProductsSuppDTO)
                 .collect(Collectors.toList());
     }
+
 }

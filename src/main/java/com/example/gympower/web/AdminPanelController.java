@@ -2,8 +2,9 @@ package com.example.gympower.web;
 
 import com.example.gympower.model.dto.display.admin.DisplayAdminOrderDTO;
 import com.example.gympower.model.dto.display.admin.DisplayAdminProductDTO;
-import com.example.gympower.model.dto.display.admin.DisplayFinancesDTO;
+import com.example.gympower.model.dto.display.admin.DisplayAnalyticsDTO;
 import com.example.gympower.model.dto.display.admin.DisplayUserTableDTO;
+import com.example.gympower.service.AnalyticsService;
 import com.example.gympower.service.OrderService;
 import com.example.gympower.service.ProductService;
 import com.example.gympower.service.UserService;
@@ -21,17 +22,19 @@ public class AdminPanelController {
     private final OrderService orderService;
     private final UserService userService;
     private final ProductService productService;
+    private final AnalyticsService analyticsService;
 
-    public AdminPanelController(OrderService orderService, UserService userService, ProductService productService) {
+    public AdminPanelController(OrderService orderService, UserService userService, ProductService productService, AnalyticsService analyticsService) {
         this.orderService = orderService;
         this.userService = userService;
         this.productService = productService;
+        this.analyticsService = analyticsService;
     }
 
     @GetMapping("/admin-panel/recent/finances")
-    public ResponseEntity<DisplayFinancesDTO> getFinancialInfo() {
+    public ResponseEntity<DisplayAnalyticsDTO> getFinancialInfo() {
 
-        DisplayFinancesDTO finances = this.orderService.getRecentFinances();
+        DisplayAnalyticsDTO finances = this.analyticsService.getLatestAnalytics();
 
         return ResponseEntity.ok(finances);
     }

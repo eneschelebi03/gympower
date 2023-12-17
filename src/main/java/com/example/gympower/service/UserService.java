@@ -21,6 +21,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -209,5 +210,11 @@ public class UserService {
         return this.userRepository.findAll().stream()
                 .map(this.userMapper::userToUserTableDTO)
                 .toList();
+    }
+
+    public int findNewDailyUsers() {
+
+        return this.userRepository
+                .countAllByRegisteredAtAfter(LocalDateTime.now().minusDays(1));
     }
 }

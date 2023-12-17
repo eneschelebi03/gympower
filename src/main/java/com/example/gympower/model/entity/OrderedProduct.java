@@ -30,6 +30,8 @@ public class OrderedProduct {
 
     private double price;
 
+    private int discount;
+
     private int count;
 
     public long getId() {
@@ -113,5 +115,12 @@ public class OrderedProduct {
         return this;
     }
 
+    public int getDiscount() {
+        return discount;
+    }
 
+    public OrderedProduct setDiscount(int discount) {
+        this.discount = discount;
+        return this;
+    }
 }

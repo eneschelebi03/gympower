@@ -2,6 +2,7 @@ package com.example.gympower.model.mapper;
 
 import com.example.gympower.model.dto.display.*;
 import com.example.gympower.model.dto.display.admin.DisplayAdminProductDTO;
+import com.example.gympower.model.dto.logic.LogProductOrderDto;
 import com.example.gympower.model.entity.CartItem;
 import com.example.gympower.model.entity.Category;
 import com.example.gympower.model.entity.OrderedProduct;
@@ -24,11 +25,14 @@ import java.util.stream.Collectors;
 public abstract class ProductMapper {
 
 
+    @Mapping(target = "price", source = "orderedProduct", qualifiedByName = "displayOrderedProdPrice")
     public abstract DisplayOrderedProductDTO orderedProductToDisplayDTO(OrderedProduct orderedProduct);
+    public abstract LogProductOrderDto orderedProductToLogProductDTO(OrderedProduct orderedProduct);
 
     @Mapping(target = "type", source = "cartItem", qualifiedByName = "orderedProductType")
     @Mapping(target = "name", source = "cartItem", qualifiedByName = "orderedProductName")
     @Mapping(target = "price", source = "cartItem", qualifiedByName = "orderedProductPrice")
+    @Mapping(target = "discount", source = "cartItem", qualifiedByName = "orderedProductDiscount")
     @Mapping(target = "cost", source = "cartItem", qualifiedByName = "orderedProductCost")
     @Mapping(target = "pictureUrl", source = "cartItem", qualifiedByName = "wearCartPicture")
     @Mapping(target = "sizeOrQuantity", source = "size")
@@ -43,6 +47,19 @@ public abstract class ProductMapper {
     @Mapping(target = "price", source = "supplement", qualifiedByName = "suppPrice")
     @Mapping(target = "pictureUrl", source = "supplement", qualifiedByName = "suppPictureUrl")
     public abstract CarouselProductDTO supplementToDisplayProductDTO(Supplement supplement);
+
+    @Named("displayOrderedProdPrice")
+    double displayOrderedProdPrice(OrderedProduct orderedProduct) {
+        double price = orderedProduct.getPrice();
+        int discount = orderedProduct.getDiscount();
+
+        if (discount != 0) {
+            price -= price * discount / 100;
+        }
+
+        return price;
+    }
+
 
     @Named("orderedProductCost")
     double orderedProductCost(CartItem cartItem) {
@@ -64,6 +81,15 @@ public abstract class ProductMapper {
                 .getPrice();
 
         return price.doubleValue();
+    }
+
+    @Named("orderedProductDiscount")
+    int orderedProductDiscount(CartItem cartItem) {
+        return cartItem.getWear().getAvailableColors().stream()
+                .filter(c -> c.getColorName().equals(cartItem.getColor()))
+                .findFirst()
+                .get()
+                .getDiscount();
     }
 
     @Named("orderedProductType")
@@ -118,6 +144,7 @@ public abstract class ProductMapper {
     public abstract DisplayAdminProductDTO wearToAdminProductDTO(Wear wear);
 
     @Mapping(target = "price", source = "wear", qualifiedByName = "wearPrice")
+    @Mapping(target = "discount", source = "wear", qualifiedByName = "wearDiscount")
     @Mapping(target = "pictureUrl", source = "wear", qualifiedByName = "wearPicture")
     public abstract AllProductsProductDTO wearToAllProductsProductDTO(Wear wear);
 
@@ -146,10 +173,18 @@ public abstract class ProductMapper {
 
     @Named("wearCartPrice")
     double wearCartPrice(CartItem cartItem) {
-        return cartItem.getWear().getAvailableColors().stream()
+        Color color = cartItem.getWear().getAvailableColors().stream()
                 .filter(c -> c.getColorName().equals(cartItem.getColor()))
-                .findFirst().get()
-                .getPrice().doubleValue();
+                .findFirst().get();
+
+        double actualPrice = color.getPrice().doubleValue();
+
+        double discount = color.getDiscount();
+        if (discount != 0) {
+            actualPrice -= actualPrice * discount / 100;
+        }
+
+        return actualPrice;
     }
 
     @Named("wearCartColorCode")
@@ -177,6 +212,13 @@ public abstract class ProductMapper {
                 .get()
                 .getPrice()
                 .doubleValue();
+    }
+    @Named("wearDiscount")
+    int wearDiscount(Wear wear) {
+        return wear.getAvailableColors().stream()
+                .findFirst()
+                .get()
+                .getDiscount();
     }
 
     @Named("wearPicture")

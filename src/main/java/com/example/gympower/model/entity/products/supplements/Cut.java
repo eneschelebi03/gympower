@@ -1,6 +1,8 @@
 package com.example.gympower.model.entity.products.supplements;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 
 @Table(name = "cuts")
@@ -20,6 +22,11 @@ public class Cut {
 
     @Column(nullable = false)
     private BigDecimal price;
+
+    @Column
+    @Min(5)
+    @Max(70)
+    private int discount;
 
     private int produced;
 
@@ -75,6 +82,15 @@ public class Cut {
 
     public Cut setProduced(int produced) {
         this.produced = produced;
+        return this;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public Cut setDiscount(int discount) {
+        this.discount = discount;
         return this;
     }
 }
