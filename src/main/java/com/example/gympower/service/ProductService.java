@@ -20,7 +20,6 @@ public class ProductService {
 
 
     public List<DisplayAdminProductDTO> getAllProducts() {
-        List<DisplayAdminProductDTO> allWear = this.wearService.getAllWearAdminTable();
-        return allWear;
+        return this.wearService.getAllWearAdminTable();
     }
 }

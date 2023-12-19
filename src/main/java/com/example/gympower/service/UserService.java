@@ -89,7 +89,7 @@ public class UserService {
 
             CartItem cartItem = this.cartItemService.findById(cartDTO.getWearId());
 
-            user.getCartItems().remove(cartItem);
+                user.getCartItems().remove(cartItem);
 
             this.cartItemService.remove(cartItem);
 
@@ -213,7 +213,6 @@ public class UserService {
     }
 
     public int findNewDailyUsers() {
-
         return this.userRepository
                 .countAllByRegisteredAtAfter(LocalDateTime.now().minusDays(1));
     }
