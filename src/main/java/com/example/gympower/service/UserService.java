@@ -20,6 +20,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -110,7 +111,21 @@ public class UserService {
                 .toList();
     }
 
+    @Transactional
     public List<String> registerAndLogin(RegisterDTO registerDTO) {
+
+        if (!registerDTO.getEmail().trim().contains("@")) {
+            return List.of("Invalid Email");
+        }
+
+        if (registerDTO.getPassword().trim().isBlank() || registerDTO.getPassword().length() < 6) {
+            return List.of("Invalid password");
+        }
+
+        if (registerDTO.getUsername().trim().isBlank() || registerDTO.getUsername().length() < 4) {
+            return List.of("Invalid username");
+        }
+
         UserEntity newUser = this.userMapper.registerDTOToUser(registerDTO);
         newUser.setPassword(this.passwordEncoder.encode(registerDTO.getPassword()));
 
