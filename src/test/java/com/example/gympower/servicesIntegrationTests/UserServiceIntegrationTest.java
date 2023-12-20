@@ -146,6 +146,7 @@ public class UserServiceIntegrationTest {
     public void testRegisterAndLogin() {
         RegisterDTO registerDTO = new RegisterDTO();
         registerDTO.setEmail("test@example.com");
+        registerDTO.setUsername("test");
         registerDTO.setPassword("password");
 
         UserEntity newUser = new UserEntity();

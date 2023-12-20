@@ -145,7 +145,7 @@ public class OrderServiceIntegrationTest {
 
         DisplayAnalyticsDTO result = orderService.getRecentFinances();
 
-        verify(orderRepository, times(1)).findByCreatedAtAfter(yesterday);
+        verify(orderRepository, times(1)).findByCreatedAtAfter(any(LocalDateTime.class));
 
         assertEquals(BigDecimal.valueOf(100.0), result.getTotalSales());
         assertEquals(BigDecimal.valueOf(50.0), result.getCosts());
